@@ -1,151 +1,172 @@
+.slider-container {
+  padding: 10px;
 
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  cursor: grab; /* Con trỏ hình bàn tay */
+  touch-action: pan-y; /* Cho phép cuộn trang dọc trên mobile, vô hiệu hóa cuộn ngang */
+}
 
-        .slider-container {
-          padding: 10px;
+.slider-container:active {
+  cursor: grabbing; /* Đổi con trỏ khi đang kéo */
+}
 
-            width: 100%;
-            height: 80vh;
-            position: relative;
-            overflow: hidden;
-            background-color: white;
-            cursor: grab; /* Con trỏ hình bàn tay */
-            touch-action: pan-y; /* Cho phép cuộn trang dọc trên mobile, vô hiệu hóa cuộn ngang */
-        }
+.slider-track {
+  display: flex;
+  height: 100%;
+  /* Hiệu ứng mượt, sẽ được tắt đi tạm thời khi người dùng đang dùng tay kéo */
+  transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+  will-change: transform;
+}
 
-        .slider-container:active {
-            cursor: grabbing; /* Đổi con trỏ khi đang kéo */
-        }
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none; /* Tránh bôi đen text khi kéo */
+  color: white;
+}
 
-        .slider-track {
-            display: flex;
-            height: 100%;
-            /* Hiệu ứng mượt, sẽ được tắt đi tạm thời khi người dùng đang dùng tay kéo */
-            transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
-            will-change: transform;
-        }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  /* QUAN TRỌNG: Vô hiệu hóa hành vi kéo ảnh mặc định của trình duyệt */
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
 
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            user-select: none; /* Tránh bôi đen text khi kéo */
-            color: white;
-        }
+.slide-overlay {
+  position: absolute;
+  z-index: 2;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 450px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  pointer-events: none;
+}
 
+.slide-title,
+.slide-desc,
+.slide-hotline {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.7s ease-out;
+}
 
+.slide.active .slide-title,
+.slide.active .slide-desc,
+.slide.active .slide-hotline {
+  opacity: 1;
+  transform: translateX(0);
+}
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            z-index: 1;
-            /* QUAN TRỌNG: Vô hiệu hóa hành vi kéo ảnh mặc định của trình duyệt */
-            -webkit-user-drag: none; 
-            pointer-events: none; 
-        }
+.slide-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  transition-delay: 0.2s;
+}
+.slide-desc {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  transition-delay: 0.4s;
+}
+.slide-hotline {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  pointer-events: auto; /* Cho phép click vào nút */
+  transition-delay: 0.6s;
+}
 
-        .slide-overlay {
-            position: absolute;
-            z-index: 2;
-            left: 10%;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            max-width: 450px;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-            pointer-events: none;
-        }
+/* Nút điều hướng */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
 
-        .slide-title, .slide-desc, .slide-hotline {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.7s ease-out;
-        }
+/* Pagination */
+.pagination {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dot.active {
+  background: #fff;
+  width: 30px;
+  border-radius: 10px;
+}
 
-        .slide.active .slide-title,
-        .slide.active .slide-desc,
-        .slide.active .slide-hotline {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .slide-title { font-size: 2.5rem; margin-bottom: 10px; transition-delay: 0.2s; }
-        .slide-desc { font-size: 1.1rem; margin-bottom: 20px; transition-delay: 0.4s; }
-        .slide-hotline {
-            display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            pointer-events: auto; /* Cho phép click vào nút */
-            transition-delay: 0.6s;
-        }
-
-        /* Nút điều hướng */
-        .slider-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 10;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
-        .slider-btn:hover { background: rgba(255, 255, 255, 0.3); }
-        .prev { left: 20px; }
-        .next { right: 20px; }
-
-        /* Pagination */
-        .pagination {
-            position: absolute;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
-        }
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .dot.active {
-            background: #fff;
-            width: 30px;
-            border-radius: 10px;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .slider-container { height: 25vh; }
-            .slide-overlay {
-                left: 5%;
-                right: 5%;
-                max-width: 90%;
-                padding: 15px;
-                text-align: center;
-                background: rgba(0, 0, 0, 0.5);
-            }
-            .slide-title { font-size: 1.1rem; }
-            .slide-desc { display: none; }
-            .slide-hotline { font-size: 0.8rem; padding: 5px 15px; }
-        }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .slider-container {
+    height: 25vh;
+  }
+  .slide-overlay {
+    left: 5%;
+    right: 5%;
+    max-width: 90%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .slide-title {
+    font-size: 1.1rem;
+  }
+  .slide-desc {
+    display: none;
+  }
+  .slide-hotline {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+  }
+}
