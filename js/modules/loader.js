@@ -1,5 +1,6 @@
 // js/modules/loader.js
 export function loadComponent(elementId, filePath, callback = null) {
+    
     const element = document.getElementById(elementId);
     if (!element) return; // Nếu trang không có thẻ này thì bỏ qua
 
