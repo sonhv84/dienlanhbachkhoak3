@@ -1,5 +1,5 @@
 body {
-    background-color: var(--white); /* Hoặc bạn có thể dùng #ffffff trực tiếp */
+    background-color:red;
     color: var(--text-dark); /* Màu chữ bạn muốn */
     min-height: 100vh;
     display: flex;
@@ -60,6 +60,8 @@ body {
         }
 
         .main-container {
+         
+
             max-width: 1200px;
             margin: -80px auto 100px;
             padding: 0 20px;

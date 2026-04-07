@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Navbar Đổi Màu</title>
+    <style>
+        /* --- 1. GIAO DIỆN MẶC ĐỊNH --- */
+        .navbar {
+            display: flex;
+            gap: 30px;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #888; /* Màu xám nhạt */
+            font-size: 20px;
+            padding-bottom: 5px;
+        }
+
+        /* --- 2. GIAO DIỆN KHI ĐƯỢC GẮN CLASS ACTIVE --- */
+        .nav-link.active {
+            color: #ff0000; /* Cố tình để màu ĐỎ cho thật nổi bật */
+            font-weight: bold;
+            border-bottom: 3px solid #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/trang-chu.html" class="nav-link">Trang chủ</a>
+        <a href="/dich-vu.html" class="nav-link">Dịch vụ</a>
+        <a href="/lien-he.html" class="nav-link">Liên hệ</a>
+    </nav>
+
+
+    <script>
+        // BƯỚC A: Giả lập việc người dùng đang truy cập vào trang Dịch vụ
+        // Trong thực tế, dòng này sẽ là: const currentUrl = window.location.pathname;
+        const currentUrl = "/dich-vu.html";
+
+        // BƯỚC B: Tìm tất cả các thẻ a trên navbar
+        const links = document.querySelectorAll('.nav-link');
+
+        // BƯỚC C: Lặp qua từng thẻ a để dò tìm
+        links.forEach(link => {
+            // Lấy nội dung bên trong chữ href="..." của thẻ a đó
+            const linkHref = link.getAttribute('href');
+
+            // BƯỚC D: Đối chiếu
+            // Nếu href (/dich-vu.html) GIỐNG HỆT với trang hiện tại (/dich-vu.html)
+            if (linkHref === currentUrl) {
+                
+                // Thì nhét thêm chữ "active" vào class của thẻ a đó
+                link.classList.add('active');
+                
+            }
+        });
+    </script>
+
+</body>
+</html>
