@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Tải HTML của Header, sau đó lập tức chạy initHeaderJS
     loadComponent(
         'header-placeholder', 
-        '/components/header.html', 
+        './components/header.html', 
         initHeaderJS
     );
 
     // Tải HTML của Footer, sau đó lập tức chạy initFooterJS
     loadComponent(
         'footer-placeholder', 
-        '/components/footer.html', 
+        './components/footer.html', 
         initFooterJS
     );
 
