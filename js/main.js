@@ -5,19 +5,14 @@ import { initFooterJS } from './modules/footer.js';
 
 // Chạy mã khi trình duyệt đã đọc xong khung HTML
 document.addEventListener("DOMContentLoaded", function() {
+    // Tên Repository chính xác của bạn
+    const REPO_NAME = '/dienlanhbachkhoak3'; 
     
-    // Tải HTML của Header, sau đó lập tức chạy initHeaderJS
-    loadComponent(
-        'header-placeholder', 
-        './components/header.html', 
-        initHeaderJS
-    );
+    // Kiểm tra xem web đang chạy trên GitHub hay trên máy tính
+    const isGitHub = window.location.hostname.includes('github.io');
+    const BASE_URL = isGitHub ? REPO_NAME : '';
 
-    // Tải HTML của Footer, sau đó lập tức chạy initFooterJS
-    loadComponent(
-        'footer-placeholder', 
-        './components/footer.html', 
-        initFooterJS
-    );
-
+    // Lắp BASE_URL vào trước đường dẫn
+    loadComponent('header-placeholder', BASE_URL + '/components/header.html', initHeaderJS);
+    loadComponent('footer-placeholder', BASE_URL + '/components/footer.html', initFooterJS);
 });
