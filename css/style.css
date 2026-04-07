@@ -1,0 +1,35 @@
+/* js/style.css */
+
+/* 1. Nhập CSS của các thành phần chung */
+@import url('./components/header.css');
+@import url('./components/footer.css');
+@import url('./base/variables.css');
+
+/* 2. Khai báo biến và định dạng toàn cục (Global) */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Đẩy footer xuống đáy màn hình */
+}
+
+#header-placeholder {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: block;
+}
