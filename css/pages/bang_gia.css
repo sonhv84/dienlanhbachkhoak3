@@ -1,0 +1,174 @@
+body {
+    background-color: var(--white); /* Hoặc bạn có thể dùng #ffffff trực tiếp */
+    color: var(--text-dark); /* Màu chữ bạn muốn */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+}
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--transition);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #033a63 100%);
+            padding: 100px 20px 140px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content .badge {
+            background: rgba(255, 180, 0, 0.15);
+            color: var(--accent-yellow);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid var(--accent-yellow);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 900;
+            margin: 0 0 15px 0;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: -80px auto 100px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .alert-box {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 6px solid var(--accent-yellow);
+            margin-bottom: 50px;
+        }
+
+        .category-group { margin-bottom: 80px; }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .category-header .icon-box {
+            width: 50px; height: 50px;
+            background: var(--primary-blue);
+            color: var(--accent-yellow);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 5px 15px rgba(6, 80, 135, 0.2);
+        }
+
+        .category-header h2 {
+            font-size: 28px;
+            color: var(--accent-yellow);
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .price-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .card-title {
+            background: #fcfcfc;
+            padding: 20px 25px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            border-bottom: 1px solid #f8f9fa;
+        }
+
+        .cta-section {
+            background: var(--primary-blue);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+            margin-top: 100px;
+        }
+
+        .btn-call-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--accent-yellow);
+            color: var(--primary-blue);
+            padding: 20px 45px;
+            border-radius: 15px;
+            font-size: 26px;
+            font-weight: 900;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+            .btn-call-large { font-size: 20px; width: 100%; justify-content: center; }
+        }

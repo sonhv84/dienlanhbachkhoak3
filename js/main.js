@@ -4,6 +4,7 @@ import { initHeaderJS } from './modules/header.js';
 import { initSearchPlaceholder } from './modules/searching_header.js';
 import { initFooterJS } from './modules/footer.js';
 import { initBanner } from './modules/banner_slider.js';
+import { initRevealOnScroll } from './modules/bang_gia.js';
 
 // THÊM DÒNG NÀY: Import module xử lý lỗi
 import { initErrorHandler } from './modules/handleExeption.js';
@@ -28,4 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     initErrorHandler(BASE_URL); // Khởi tạo bộ xử lý lỗi với BASE_URL
     initBanner('slider'); // Khởi tạo slider cho banner
+initRevealOnScroll('.reveal', 0.1);
+  initButtonPulse('mainCallBtn', 4000, 300);  
 });

@@ -6,6 +6,7 @@
 @import url('./base/variables.css');
 @import url('./pages/404.css');
 @import url('./pages/index.css');
+@import url('./pages/bang_gia.css');
 
 /* 2. Khai báo biến và định dạng toàn cục (Global) */
 
@@ -18,11 +19,14 @@
 }
 
 body {
-    background-color: #f0f2f5;
+            background-color: var(--white);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+            line-height: 1.6;
+
 }
+
 
 main {
     flex: 1; /* Đẩy footer xuống đáy màn hình */

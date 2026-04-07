@@ -3,12 +3,13 @@
      1. MÀU SẮC CHÍNH (PRIMARY COLORS)
   ========================================= */
   --primary-color: #0056b3;    /* Xanh dương (dùng cho Header/Nút chung) */
-  --primary-blue: #005696;     /* Xanh đậm (Màu thay thế/thương hiệu) */
-  
+  --primary-blue: #065087;     /* Xanh đậm (Màu thay thế/thương hiệu) */
+
   /* =========================================
      2. MÀU NỀN (BACKGROUNDS)
   ========================================= */
   --bg-color: #ffffff;         /* Nền trắng cơ bản của web */
+  --bg-gray: #f8fafc;          /* Nền xám nhạt (dùng cho các section/khối phụ) */
   --hover-bg: #f5f7fa;         /* Nền xám nhạt khi lia chuột (Hover) */
   --footer-bg: #1a3a5a;        /* Nền xanh đen mờ đặc trưng của Footer */
 
@@ -16,21 +17,28 @@
      3. MÀU ĐIỂM NHẤN (ACCENTS)
   ========================================= */
   --accent-cyan: #40e0d0;      /* Xanh lơ (dùng cho tiêu đề h3 ở Footer) */
-  --accent-yellow: #ffb400;    /* Vàng nổi bật (dùng cho nút Hotline) */
+  --accent-yellow: #ffb400;    /* Vàng nổi bật (dùng cho nút Hotline/Highlight) */
 
   /* =========================================
      4. MÀU CHỮ & ĐƯỜNG VIỀN (TEXT & BORDERS)
   ========================================= */
   --text-color: #333333;       /* Màu chữ cơ bản (hiển thị trên nền sáng) */
-  --text-dark: #333333;        /* Giữ lại để backup nếu lỡ gọi tên biến này */
+  --text-dark: #2d3436;        /* Màu chữ tối/đậm hơn (dùng cho Tiêu đề) */
+  --text-muted: #636e72;       /* Màu chữ nhạt/phụ (dùng cho đoạn văn phụ/mô tả) */
   --text-light: #ffffff;       /* Màu chữ trắng (hiển thị trên nền tối/Footer) */
   --white: #ffffff;            /* Mã màu trắng thuần */
   --border-color: #e0e0e0;     /* Màu xám nhạt cho các đường kẻ/viền */
 
   /* =========================================
-     5. CẤU HÌNH KÍCH THƯỚC & HIỆU ỨNG
+     5. HIỆU ỨNG & ĐỔ BÓNG (SHADOWS & TRANSITIONS)
+  ========================================= */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);            /* Đổ bóng cho thẻ/khối */
+  --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); /* Hiệu ứng mượt nâng cao */
+  --transition-speed: 0.3s;                             /* Tốc độ hiệu ứng chuyển động chung */
+
+  /* =========================================
+     6. CẤU HÌNH KÍCH THƯỚC (DIMENSIONS)
   ========================================= */
   --header-height: 80px;       /* Chiều cao Header trên máy tính */
   --mobile-header-height: 70px;/* Chiều cao Header trên điện thoại */
-  --transition-speed: 0.3s;    /* Tốc độ hiệu ứng chuyển động chung */
 }
