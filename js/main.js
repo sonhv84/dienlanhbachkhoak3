@@ -5,6 +5,7 @@ import { initSearchPlaceholder } from './modules/searching_header.js';
 import { initFooterJS } from './modules/footer.js';
 import { initBanner } from './modules/banner_slider.js';
 import { initRevealOnScroll } from './modules/bang_gia.js';
+import { initButtonPulse } from './modules/bang_gia.js';
 
 // THÊM DÒNG NÀY: Import module xử lý lỗi
 import { initErrorHandler } from './modules/handleExeption.js';
