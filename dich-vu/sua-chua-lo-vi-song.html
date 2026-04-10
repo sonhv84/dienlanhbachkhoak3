@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Sửa Chữa Lò Vi Sóng Tại Hà Nội – Uy Tín, Linh Kiện Chính Hãng</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --footer-bg: #1a3a5a;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.7; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        /* --- Block: layout-container --- */
+        .layout-container { max-width: 1100px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        /* --- Block: breadcrumb --- */
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: btn --- */
+        .btn { display: inline-block; border-radius: 5px; font-weight: bold; text-align: center; cursor: pointer; }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 15px 35px; border-radius: 50px; font-size: 18px; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+        .btn--outline { border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; }
+        .btn--outline:hover { background: var(--primary-color); color: var(--white); }
+        .btn--large { font-size: 22px; padding: 18px 50px; border-radius: 8px; }
+
+        /* --- Block: hero --- */
+        .hero { padding: 40px 30px; text-align: center; border-bottom: 1px solid var(--border-color); }
+        .hero__title { color: var(--primary-blue); font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
+        .hero__desc { color: var(--text-muted); max-width: 800px; margin: 0 auto 25px; font-size: 16px; }
+        .hero__hotline-sub { display: block; margin-top: 15px; color: var(--primary-color); font-weight: bold; font-size: 16px; }
+
+        /* --- Block: service-detail --- */
+        .service-detail { padding: 40px 30px; }
+        .service-detail__block { margin-bottom: 40px; }
+        .service-detail__heading { font-size: 22px; color: var(--primary-blue); border-left: 4px solid var(--accent-cyan); padding-left: 10px; margin-bottom: 15px; }
+        .service-detail__subheading { font-size: 18px; color: var(--text-dark); margin: 20px 0 10px; }
+        .service-detail__text { margin-bottom: 15px; }
+        .service-detail__list { padding-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+        .service-detail__item { margin-bottom: 10px; }
+
+        /* --- Block: image-box --- */
+        .image-box { text-align: center; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        .image-box__img { width: 100%; max-width: 800px; border-radius: 8px; box-shadow: var(--shadow); transition: transform var(--transition-speed); }
+        .image-box__img:hover { transform: scale(1.02); }
+        .image-box__caption { display: block; font-style: italic; color: var(--text-muted); margin-top: 10px; font-size: 14px; }
+
+        /* --- Block: promo-banner --- */
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 1px solid var(--border-color); }
+
+        /* --- Block: related-posts --- */
+        .related-posts { background-color: var(--bg-gray); padding: 40px 30px; border-top: 1px solid var(--border-color); }
+        .related-posts__title { text-align: center; color: var(--primary-blue); margin-bottom: 30px; font-size: 22px; }
+        .related-posts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        /* --- Block: post-card --- */
+        .post-card { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: all var(--transition-speed); }
+        .post-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--accent-cyan); }
+        .post-card__title { font-size: 18px; color: var(--text-dark); margin-bottom: 10px; }
+        .post-card__desc { color: var(--text-muted); font-size: 14px; margin-bottom: 15px; }
+        .post-card__link { color: var(--primary-color); font-weight: bold; font-size: 14px; }
+        .post-card__link:hover { color: var(--accent-cyan); }
+
+        /* --- Block: bottom-cta --- */
+        .bottom-cta { background: var(--footer-bg); padding: 50px 20px; text-align: center; }
+        .bottom-cta__title { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+        .bottom-cta__desc { color: var(--accent-cyan); font-size: 18px; margin-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../dich-vu.html" class="breadcrumb__link">Dịch vụ Điện Lạnh</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Sửa Chữa Lò Vi Sóng Tại Hà Nội</span>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero__title">Dịch Vụ Sửa Chữa Lò Vi Sóng Tại Hà Nội – Uy Tín, Linh Kiện Chính Hãng</h1>
+        <p class="hero__desc">Lò vi sóng hiện đang là thiết bị điện tử được sử dụng phổ biến hiện nay. Tuy nhiên, đây là thiết bị có cấu tạo khá phức tạp, khó sửa chữa và cũng dễ hỏng hóc. Vì thế, trong quá trình sử dụng, khi lò vi sóng bị hỏng, bạn nên lựa chọn các đơn vị sửa chữa uy tín, đáng tin cậy để gửi gắm niềm tin.</p>
+        <p class="hero__desc">Quý khách đang tìm kiếm địa chỉ <strong>sửa chữa lò vi sóng tại nhà Hà Nội</strong> chuyên nghiệp? <strong>Điện Lạnh Bách Khoa</strong> cam kết xử lý triệt để mọi sự cố, thay thế linh kiện chính hãng với mức giá minh bạch nhất.</p>
+        
+        <a href="tel:0559763681" class="btn btn--primary">📞 0559763681 - BẤM GỌI NGAY</a>
+        <a href="tel:0367274152" class="hero__hotline-sub">Hoặc Hotline: 0367274152</a>
+    </section>
+
+    <section class="service-detail">
+        
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">1. Phân loại lò vi sóng phổ biến hiện nay</h2>
+            <p class="service-detail__text">Hiện nay trên thị trường đang có 2 loại lò vi sóng chủ yếu:</p>
+            
+            <h3 class="service-detail__subheading">Lò vi sóng cơ</h3>
+            <p class="service-detail__text">Lò vi sóng cơ có cách sử dụng đơn giản với núm xoay để điều chỉnh thời gian và công suất.</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Ưu điểm:</strong> Thiết kế đơn giản, dễ sử dụng, tuổi thọ cao, bền bỉ và giá thành phù hợp.</li>
+                <li class="service-detail__item"><strong>Nhược điểm:</strong> Thời gian hẹn giờ thấp (tối đa 40 phút), ít chức năng nấu nướng.</li>
+            </ul>
+
+            <h3 class="service-detail__subheading">Lò vi sóng điện tử</h3>
+            <p class="service-detail__text">Sử dụng bảng điều khiển nút bấm cảm ứng, có hệ thống đèn led hỗ trợ.</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Ưu điểm:</strong> Chế độ nấu đa dạng, tích hợp nướng, hẹn giờ lâu, có nhiều chức năng như khóa an toàn, tiết kiệm điện.</li>
+                <li class="service-detail__item"><strong>Nhược điểm:</strong> Cách sử dụng phức tạp hơn, giá cao hơn và tuổi thọ trung bình thấp hơn lò cơ.</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/lo-vi-song-hai-thanh-phan.png" alt="Lò vi sóng được chia thành 2 loại chính" class="image-box__img">
+                <span class="image-box__caption">Lò vi sóng được chia thành 2 loại chính là lò cơ và lò điện tử</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">2. Một số thương hiệu lò vi sóng bạn không nên bỏ qua</h2>
+            <p class="service-detail__text">Hiện nay trên thị trường có rất nhiều thương hiệu lò vi sóng với công dụng và mức giá khác nhau:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Lò vi sóng Electrolux:</strong> Thiết kế thanh mảnh, dễ sử dụng, tiết kiệm điện và gia nhiệt rất nhanh.</li>
+                <li class="service-detail__item"><strong>Lò vi sóng Sanyo:</strong> Mức giá trung bình, phù hợp với nhu cầu gia đình Việt, chủ yếu là dòng lò cơ bền bỉ.</li>
+                <li class="service-detail__item"><strong>Lò vi sóng Samsung:</strong> Thường là lò điện tử với nhiều chức năng nấu, bảng điều khiển tiếng Việt dễ hiểu.</li>
+                <li class="service-detail__item"><strong>Lò vi sóng Sharp:</strong> Sản phẩm nổi tiếng nhất với khoang lò làm từ thép không gỉ chịu nhiệt tốt.</li>
+            </ul>
+        </div>
+
+        <div class="promo-banner">
+            <a href="tel:0559763681" class="btn btn--outline">⚡ Sửa nhanh tại nhà chỉ từ 150k: 0559763681</a>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">3. Những sự cố thường gặp ở lò vi sóng</h2>
+            <p class="service-detail__text">Trong quá trình sử dụng, một số sự cố thường gặp có thể kể tới như:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Lò vi sóng không hoạt động:</strong> Có thể do cầu chì hoặc nguồn điện gặp sự cố.</li>
+                <li class="service-detail__item"><strong>Hoạt động nhưng không nóng:</strong> Nguyên nhân chính là do bộ vi sóng của lò bị hỏng hoặc board mạch điện tử bị lỗi.</li>
+                <li class="service-detail__item"><strong>Đĩa xoay không xoay:</strong> Do đặt lệch đĩa, bộ phận phía dưới bị kẹt bẩn hoặc động cơ phía dưới đã bị hỏng.</li>
+                <li class="service-detail__item"><strong>Lò đang hoạt động tự ngưng:</strong> Thường do ổ cắm lỏng hoặc lò đặt ở vị trí quá bí khiến nhiệt không thoát được.</li>
+                <li class="service-detail__item"><strong>Lò vi sóng nhiễm điện:</strong> Do lớp sơn tĩnh điện bị bong tróc. Cần liên hệ thợ chuyên nghiệp để kiểm tra ngay.</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/lo-vi-song-yeu-thich.png" alt="Lò vi sóng là thiết bị được nhiều người yêu thích và sử dụng" class="image-box__img">
+                <span class="image-box__caption">Lò vi sóng là thiết bị tiện lợi nhưng cần được sửa chữa đúng kỹ thuật khi gặp sự cố</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">4. Quy trình sửa chữa chuyên nghiệp tại nhà</h2>
+            <p class="service-detail__text">Để đảm bảo thiết bị hoạt động ổn định nhất, <strong>Điện Lạnh Bách Khoa</strong> áp dụng quy trình chuẩn:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Bước 1:</strong> Tiếp nhận yêu cầu và có mặt tại nhà khách hàng sau 20 phút.</li>
+                <li class="service-detail__item"><strong>Bước 2:</strong> Kiểm tra chi tiết nguyên nhân hỏng hóc bằng thiết bị chuyên dụng.</li>
+                <li class="service-detail__item"><strong>Bước 3:</strong> Báo giá minh bạch theo khung giá quy định của công ty.</li>
+                <li class="service-detail__item"><strong>Bước 4:</strong> Tiến hành sửa chữa, thay thế linh kiện chính hãng (nếu cần).</li>
+                <li class="service-detail__item"><strong>Bước 5:</strong> Vận hành thử, bàn giao và viết phiếu bảo hành dài hạn.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">5. Mẹo bảo quản và sử dụng an toàn</h2>
+            <ol class="service-detail__list">
+                <li class="service-detail__item"><strong>Vệ sinh thường xuyên:</strong> Lau sạch khoang lò sau mỗi lần sử dụng để tránh thức ăn bám dính gây rỉ sét vỏ lò.</li>
+                <li class="service-detail__item"><strong>Vị trí đặt lò:</strong> Đặt lò ở nơi khô ráo, thoáng mát, cách tường tối thiểu 10cm để máy tản nhiệt tốt.</li>
+                <li class="service-detail__item"><strong>Không dùng vật dụng kim loại:</strong> Tuyệt đối không đưa bát đĩa kim loại vào lò để tránh hiện tượng phóng điện gây cháy nổ.</li>
+            </ol>
+        </div>
+
+    </section>
+
+    <section class="related-posts">
+        <h2 class="related-posts__title">Bài Viết Liên Quan</h2>
+        <div class="related-posts__grid">
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Chữa Bình Nóng Lạnh</h3>
+                <p class="post-card__desc">Bảo dưỡng, thay thế linh kiện bình nóng lạnh chuyên nghiệp và an toàn.</p>
+                <a href="./sua-chua-binh-nong-lanh.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Chữa Máy Giặt Tại Nhà</h3>
+                <p class="post-card__desc">Khắc phục nhanh chóng lỗi không quay, không cấp xả nước trên máy giặt.</p>
+                <a href="./sua-chua-may-giat.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Chữa Điều Hòa</h3>
+                <p class="post-card__desc">Khắc phục triệt để tình trạng máy chạy nhưng không lạnh, block không hoạt động.</p>
+                <a href="./sua-chua-dieu-hoa.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta">
+        <h3 class="bottom-cta__title">ĐẶT LỊCH SỬA CHỮA NGAY</h3>
+        <p class="bottom-cta__desc">Chuyên Nghiệp - Tận Tâm - Có Mặt Sau 20 Phút</p>
+        <a href="tel:0559763681" class="btn btn--primary btn--large">HOTLINE: 0559763681</a>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

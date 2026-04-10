@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bắt Bệnh Máy Giặt Kêu To, Rung Lắc Khi Vắt – Điện Lạnh Bách Khoa</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.8; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        .layout-container { max-width: 900px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: article --- */
+        .article { padding: 40px 40px; }
+        
+        .article__header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+        .article__title { color: var(--primary-blue); font-size: 32px; margin-bottom: 15px; line-height: 1.4; }
+        .article__meta { color: var(--text-muted); font-size: 14px; font-style: italic; }
+        .article__meta span { margin: 0 10px; }
+        .article__meta strong { color: var(--primary-color); }
+
+        .article__content h2 { font-size: 24px; color: var(--primary-blue); margin: 30px 0 15px; border-left: 4px solid var(--accent-cyan); padding-left: 10px; }
+        .article__content h3 { font-size: 20px; color: var(--text-dark); margin: 20px 0 10px; }
+        .article__content p { margin-bottom: 15px; font-size: 16px; color: var(--text-color); }
+        .article__content ul, .article__content ol { margin-bottom: 15px; padding-left: 20px; }
+        .article__content li { margin-bottom: 10px; }
+        .article__content img { width: 100%; height: auto; border-radius: 8px; margin: 20px 0; box-shadow: var(--shadow); }
+        .article__content .img-caption { display: block; text-align: center; font-style: italic; font-size: 14px; color: var(--text-muted); margin-top: -10px; margin-bottom: 20px; }
+
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 2px dashed var(--accent-cyan); }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 12px 30px; border-radius: 50px; font-weight: bold; font-size: 18px; display: inline-block; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); margin-top: 10px; }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../tin-tuc.html" class="breadcrumb__link">Tin tức & Cẩm nang</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Bắt Bệnh Máy Giặt Kêu To...</span>
+    </nav>
+
+    <article class="article">
+        <header class="article__header">
+            <h1 class="article__title">Bắt Bệnh Máy Giặt Kêu To, Rung Lắc Mạnh Khi Vắt Và Cách Khắc Phục</h1>
+            <div class="article__meta">
+                <span><i class="fas fa-calendar-alt"></i> Ngày đăng: <strong>28/03/2026</strong></span> |
+                <span><i class="fas fa-user"></i> Tác giả: <strong>Kỹ thuật viên Bách Khoa</strong></span> |
+                <span><i class="fas fa-folder"></i> Chuyên mục: <strong>Máy giặt</strong></span>
+            </div>
+        </header>
+
+        <div class="article__content">
+            <p>Máy giặt đang hoạt động bình thường, nhưng cứ chuyển sang chu trình vắt (spin) là lại kêu "rầm rầm" như một chiếc máy cày, thậm chí máy giặt cửa ngang còn tự dịch chuyển khỏi vị trí ban đầu? Đây là nỗi ám ảnh của rất nhiều bà nội trợ.</p>
+            <p>Tình trạng rung lắc mạnh kéo dài không chỉ gây tiếng ồn khó chịu mà còn làm hỏng trục lồng giặt, nứt vỏ máy. Dưới đây là những thủ phạm chính gây ra căn bệnh này và cách khắc phục triệt để.</p>
+
+            <img src="../dich-vu/data/images/kiem-tra-long-giat.png" alt="Máy giặt kêu to rung lắc mạnh">
+            <span class="img-caption">Lồng giặt kêu to khi vắt là báo hiệu các linh kiện chịu lực đang bị tổn thương</span>
+
+            <h2>1. Máy giặt được kê ở vị trí không bằng phẳng</h2>
+            <p>Đây là nguyên nhân khách quan và dễ xử lý nhất. Khi chân đế máy giặt không tiếp xúc đều với mặt sàn, trọng tâm máy bị lệch. Khi lồng giặt quay ở tốc độ cao (thường từ 800 - 1200 vòng/phút), lực ly tâm sẽ khiến toàn bộ cỗ máy bị chao đảo mạnh.</p>
+            <p><strong>Cách khắc phục:</strong> Kiểm tra lại 4 chân ốc của máy giặt. Hầu hết các loại máy giặt đều có chân ốc xoay được để điều chỉnh độ cao thấp. Hãy dùng ống ni-vô (thước thủy) để căn chỉnh lại cho thật thăng bằng trên nền nhà cứng.</p>
+
+            <h2>2. Quần áo bị dồn về một phía lồng giặt</h2>
+            <p>Khi bạn giặt các món đồ lớn như chăn mền, áo khoác dày lẫn với quần áo nhỏ, chúng rất dễ cuộn tròn và dồn hết về một góc lồng giặt. Lúc này, lồng giặt sẽ bị mất cân bằng động nghiêm trọng khi vắt.</p>
+            <p><strong>Cách khắc phục:</strong> Tạm dừng máy, tơi tơi quần áo ra cho đều khắp lồng giặt rồi mới cho máy vắt tiếp. Nên sử dụng túi giặt cho các đồ vật nhỏ rườm rà.</p>
+
+            <div class="promo-banner">
+                <h3 style="color: var(--primary-blue); margin-bottom: 5px;">MÁY GIẶT NHÀ BẠN CỨ VẮT LÀ "ĐI CHƠI"?</h3>
+                <p>Khả năng cao cụm chảng ba hoặc thụt giảm xóc đã bị vỡ/mòn gãy. Cần thay thế khẩn cấp!</p>
+                <a href="tel:0559763681" class="btn btn--primary">GỌI THỢ KIỂM TRA LỒNG GIẶT: 0559763681</a>
+            </div>
+
+            <h2>3. Hỏng bộ giảm xóc (Thụt nhún)</h2>
+            <p>Máy giặt (đặc biệt là máy cửa ngang) được trang bị 2-4 chiếc thụt giảm xóc bên dưới lồng giặt để triệt tiêu lực rung. Sau vài năm sử dụng, phớt mút bên trong thụt bị khô dầu, mòn rách hoặc lò xo bị yếu đi. Khi đó, lồng giặt sẽ va đập trực tiếp vào thành vỏ máy gây ra tiếng kêu "uỳnh uỳnh" rất đáng sợ.</p>
+            <p><strong>Cách khắc phục:</strong> Đây là lỗi linh kiện. Bạn cần gọi thợ kỹ thuật để thay mới đồng bộ bộ giảm xóc cho máy. Chi phí thường không quá đắt nhưng mang lại hiệu quả tức thì.</p>
+
+            <h2>4. Hỏng cụm bi phớt, gãy chảng ba lồng giặt</h2>
+            <p>Nếu tiếng kêu của máy nghe rít lên "két két" hoặc "rào rào" như hai mảnh kim loại cọ vào nhau, 99% vòng bi (bạc đạn) đã bị vỡ do nước rỉ vào. Nghiêm trọng hơn, nếu bạn thường xuyên giặt quá tải, bộ chảng ba (trục đỡ lồng giặt inox) bằng hợp kim gang có thể bị nứt gãy.</p>
+            <p><strong>Cách khắc phục:</strong> Đây là ca "đại phẫu" của máy giặt. Thợ sửa chữa phải nhấc toàn bộ lồng giặt ra ngoài, dùng cảo ép thủy lực để đóng bi mới hoặc hàn/thay chảng ba mới. Việc này đòi hỏi kỹ thuật cao và nên thực hiện ngay trước khi máy bị kẹt cứng hoàn toàn làm cháy motor.</p>
+
+            <h2>5. Dị vật kẹt trong lồng giặt</h2>
+            <p>Đồng xu, chìa khóa, kẹp tóc hay gọng áo lót rơi ra từ túi quần áo và chui tọt vào khe hở giữa lồng inox và lồng nhựa bên ngoài. Khi lồng quay, chúng sẽ cọ xát tạo ra âm thanh lạch cạch rất khó chịu.</p>
+
+            <p><strong>Kết luận:</strong> Máy giặt kêu to khi vắt là tiếng "kêu cứu" của thiết bị. Nếu bạn đã kê lại máy thăng bằng, chia đều quần áo mà vẫn không hết kêu, hãy ngừng sử dụng ngay lập tức để tránh làm hỏng lan sang bo mạch và mâm từ.</p>
+            <p>Quý khách tại Hà Nội cần kiểm tra bệnh rung lắc máy giặt, vui lòng liên hệ <strong>Điện Lạnh Bách Khoa - 0559763681</strong> để đội ngũ thợ giỏi của chúng tôi hỗ trợ xử lý ngay trong ngày!</p>
+        </div>
+    </article>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

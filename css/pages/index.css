@@ -1,4 +1,5 @@
 .slider-container {
+  padding-top: 10px;
   width: 100%;
   height: 80vh;
   position: relative;
@@ -168,3 +169,287 @@
     padding: 5px 15px;
   }
 }
+
+/* =========================================
+   INTRO SECTION
+========================================= */
+.intro-section {
+  padding: 60px 0;
+  /* Dùng màu primary-blue làm nền overlay cho ảnh */
+  background: linear-gradient(rgba(6, 80, 135, 0.9), rgba(6, 80, 135, 0.9));
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.brand-name {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--accent-yellow);
+}
+
+.brand-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--text-light);
+}
+
+.brand-badges span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin: 5px;
+  border: 1px solid var(--accent-cyan);
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.brand-badges span:hover {
+  background: var(--accent-cyan);
+  color: var(--text-dark);
+}
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+.why-choose-us {
+  padding: 80px 0;
+  background: var(--bg-gray);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reason-item {
+  background: var(--bg-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.reason-item:hover {
+  transform: translateY(-5px);
+  background: var(--hover-bg);
+}
+
+.reason-item i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.reason-item p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =========================================
+   PROCESS STEPS
+========================================= */
+.work-process {
+  padding: 80px 0;
+  background: var(--bg-color);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  padding: 30px 20px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-bottom: 4px solid transparent;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+}
+
+.step h3 {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   CALL TO ACTION (CTA)
+========================================= */
+.cta-box {
+  margin: 50px auto 0;
+  max-width: 800px;
+  text-align: center;
+  padding: 40px 30px;
+  background: var(--primary-blue);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.cta-box p {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 40px;
+  background: var(--accent-yellow);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background: #e6a300; /* Vàng sậm hơn một chút khi hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 180, 0, 0.4);
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+}
+
+
+/* --- Block: testimonials (Phản hồi khách hàng) --- */
+        .testimonials { 
+            padding: 60px 15px; 
+            background: var(--bg-gray); /* Nền xám nhạt để tách biệt với phần tin tức */
+        }
+        
+        .testimonials__grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+        }
+
+        .testimonial-card { 
+            background: var(--bg-color); 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            transition: all var(--transition-speed); 
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: var(--shadow); 
+            border-color: var(--accent-cyan); 
+        }
+
+        .testimonial-card__icon { 
+            font-size: 30px; 
+            color: var(--accent-cyan); 
+            opacity: 0.6; 
+            margin-bottom: 15px; 
+        }
+
+        .testimonial-card__text { 
+            color: var(--text-color); 
+            font-style: italic; 
+            margin-bottom: 20px; 
+            line-height: 1.6; 
+            flex-grow: 1;
+        }
+
+        .testimonial-card__rating { 
+            color: var(--accent-yellow); 
+            margin-bottom: 15px; 
+            font-size: 14px;
+        }
+
+        .testimonial-card__author {
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        .testimonial-card__author strong { 
+            display: block; 
+            color: var(--primary-blue); 
+            font-size: 16px; 
+            margin-bottom: 3px;
+        }
+
+        .testimonial-card__author span { 
+            color: var(--text-muted); 
+            font-size: 13px; 
+        }

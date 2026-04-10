@@ -1,0 +1,139 @@
+/* File: css/style.css hoặc css/pages/index.css */
+
+.services-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.service-category {
+  margin-bottom: 50px;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  color: var(--primary-color, #0056b3); /* Tận dụng variables.css nếu có */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- LƯỚI CARD BÀI VIẾT --- */
+.articles-grid {
+  display: grid;
+  /* Nếu lớn hơn 300px sẽ tự động chia cột, mặc định ra 3-4 cột tuỳ màn hình */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* --- STYLE TỪNG CARD BÀI VIẾT --- */
+.article-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.15rem;
+  margin: 0 0 12px;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 20px;
+  line-height: 1.5;
+  flex-grow: 1; /* Căn chỉnh nút chi tiết luôn nằm dưới cùng */
+}
+
+.read-more {
+  align-self: flex-start;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* --- STYLE CHO NÚT PHÂN TRANG --- */
+.pagination {
+  display: flex;
+  position:absolute;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.pagination button.page-btn {
+position: sticky;
+  padding: 8px 16px;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  color: #495057;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button.page-btn:hover {
+  background-color: #e9ecef;
+  color: #0066cc;
+}
+
+.pagination button.page-btn.active {
+  background-color: #0066cc;
+  color: #fff;
+  border-color: #0066cc;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

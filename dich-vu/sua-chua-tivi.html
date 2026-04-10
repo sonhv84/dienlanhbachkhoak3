@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Chữa Tivi Tại Nhà Hà Nội – Khắc Phục Mọi Pan Bệnh, Linh Kiện Chính Hãng</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --footer-bg: #1a3a5a;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.7; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        /* --- Block: layout-container --- */
+        .layout-container { max-width: 1100px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        /* --- Block: breadcrumb --- */
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: btn --- */
+        .btn { display: inline-block; border-radius: 5px; font-weight: bold; text-align: center; cursor: pointer; }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 15px 35px; border-radius: 50px; font-size: 18px; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+        .btn--outline { border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; }
+        .btn--outline:hover { background: var(--primary-color); color: var(--white); }
+        .btn--large { font-size: 22px; padding: 18px 50px; border-radius: 8px; }
+
+        /* --- Block: hero --- */
+        .hero { padding: 40px 30px; text-align: center; border-bottom: 1px solid var(--border-color); }
+        .hero__title { color: var(--primary-blue); font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
+        .hero__desc { color: var(--text-muted); max-width: 800px; margin: 0 auto 25px; font-size: 16px; }
+        .hero__hotline-sub { display: block; margin-top: 15px; color: var(--primary-color); font-weight: bold; font-size: 16px; }
+
+        /* --- Block: service-detail --- */
+        .service-detail { padding: 40px 30px; }
+        .service-detail__block { margin-bottom: 40px; }
+        .service-detail__heading { font-size: 22px; color: var(--primary-blue); border-left: 4px solid var(--accent-cyan); padding-left: 10px; margin-bottom: 15px; }
+        .service-detail__subheading { font-size: 18px; color: var(--text-dark); margin: 20px 0 10px; }
+        .service-detail__text { margin-bottom: 15px; }
+        .service-detail__list { padding-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+        .service-detail__item { margin-bottom: 10px; }
+
+        /* --- Block: image-box --- */
+        .image-box { text-align: center; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        .image-box__img { width: 100%; max-width: 800px; border-radius: 8px; box-shadow: var(--shadow); transition: transform var(--transition-speed); }
+        .image-box__img:hover { transform: scale(1.02); }
+        .image-box__caption { display: block; font-style: italic; color: var(--text-muted); margin-top: 10px; font-size: 14px; }
+
+        /* --- Block: promo-banner --- */
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 1px solid var(--border-color); }
+
+        /* --- Block: related-posts --- */
+        .related-posts { background-color: var(--bg-gray); padding: 40px 30px; border-top: 1px solid var(--border-color); }
+        .related-posts__title { text-align: center; color: var(--primary-blue); margin-bottom: 30px; font-size: 22px; }
+        .related-posts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        /* --- Block: post-card --- */
+        .post-card { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: all var(--transition-speed); }
+        .post-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--accent-cyan); }
+        .post-card__title { font-size: 18px; color: var(--text-dark); margin-bottom: 10px; }
+        .post-card__desc { color: var(--text-muted); font-size: 14px; margin-bottom: 15px; }
+        .post-card__link { color: var(--primary-color); font-weight: bold; font-size: 14px; }
+        .post-card__link:hover { color: var(--accent-cyan); }
+
+        /* --- Block: bottom-cta --- */
+        .bottom-cta { background: var(--footer-bg); padding: 50px 20px; text-align: center; }
+        .bottom-cta__title { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+        .bottom-cta__desc { color: var(--accent-cyan); font-size: 18px; margin-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../dich-vu.html" class="breadcrumb__link">Dịch vụ Điện Lạnh</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Sửa Chữa Tivi Tại Hà Nội</span>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero__title">Sửa Chữa Tivi Tại Nhà Hà Nội – Khắc Phục Mọi Pan Bệnh, Linh Kiện Chính Hãng</h1>
+        <p class="hero__desc">Tivi là trung tâm giải trí của gia đình. Khi thiết bị gặp sự cố như mất hình, mất tiếng, kẻ sọc màn hình hay không bắt được wifi, trải nghiệm của bạn sẽ bị gián đoạn hoàn toàn. Hơn nữa, việc tháo dỡ và vận chuyển những chiếc tivi màn hình lớn (55 - 85 inch) đến trung tâm bảo hành là cực kỳ rủi ro và cồng kềnh.</p>
+        <p class="hero__desc">Thấu hiểu điều đó, <strong>Điện Lạnh Bách Khoa</strong> cung cấp dịch vụ <strong>sửa tivi tại nhà Hà Nội</strong> chuyên nghiệp. Đội ngũ kỹ thuật viên am hiểu sâu về điện tử sẽ đến tận nơi kiểm tra, chẩn đoán và khắc phục nhanh chóng các lỗi trên tivi Sony, Samsung, LG,...</p>
+        
+        <a href="tel:0559763681" class="btn btn--primary">📞 0559763681 - BẤM GỌI NGAY</a>
+        <a href="tel:0367274152" class="hero__hotline-sub">Hoặc Hotline: 0367274152</a>
+    </section>
+
+    <section class="service-detail">
+        
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">1. Các lỗi thường gặp trên Tivi hiện nay</h2>
+            <p class="service-detail__text">Dù là tivi LED, OLED hay QLED, sau thời gian sử dụng đều có thể phát sinh các lỗi về bo mạch, LED nền hoặc panel màn hình. Hãy gọi thợ ngay nếu tivi nhà bạn gặp tình trạng:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Lỗi có tiếng nhưng không có hình:</strong> Tivi vẫn phát âm thanh bình thường nhưng màn hình tối đen. Nguyên nhân 90% là do hỏng hệ thống đèn LED nền hoặc hỏng bo cao áp.</li>
+                <li class="service-detail__item"><strong>Lỗi về hình ảnh/Panel:</strong> Màn hình bị kẻ sọc ngang/dọc, bị lưu ảnh (bóng ma), hình ảnh bị nhòe màu, trắng xóa hoặc có đốm sáng bất thường.</li>
+                <li class="service-detail__item"><strong>Lỗi bo mạch nguồn/Điều khiển:</strong> Tivi cắm điện không lên đèn báo nguồn, tự động tắt bật liên tục, hoặc không nhận tín hiệu từ điều khiển (remote), không kết nối được Wifi/Lan.</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/tivi.png" alt="Sửa chữa lỗi màn hình Tivi" class="image-box__img">
+                <span class="image-box__caption">Khắc phục các lỗi hiển thị, kẻ sọc màn hình, chết điểm ảnh</span>
+            </div>
+        </div>
+
+        <div class="promo-banner">
+            <a href="tel:0559763681" class="btn btn--outline">⚡ Tư vấn lỗi Tivi miễn phí qua điện thoại: 0559763681</a>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">2. Nguyên nhân gây hỏng Tivi phổ biến</h2>
+            <ol class="service-detail__list">
+                <li class="service-detail__item"><strong>Yếu tố môi trường:</strong> Thời tiết nồm ẩm tại miền Bắc rất dễ làm rỉ sét các chân linh kiện, chập cháy bo mạch điện tử bên trong.</li>
+                <li class="service-detail__item"><strong>Nguồn điện không ổn định:</strong> Điện áp tăng giảm đột ngột (đặc biệt khi có sấm sét) là "sát thủ" gây chết nguồn và bo khiển.</li>
+                <li class="service-detail__item"><strong>Nước vào màn hình:</strong> Thường do thói quen lau màn hình bằng khăn quá ướt, nước chảy xuống mép dưới màn hình làm chập cháy mạch Tab panel (rất khó sửa và tốn kém).</li>
+                <li class="service-detail__item"><strong>Linh kiện hết tuổi thọ:</strong> Đặc biệt là hệ thống đèn LED nền, sau khoảng 3-5 năm sử dụng liên tục sẽ bắt đầu cháy rụng.</li>
+            </ol>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">3. Điện Lạnh Bách Khoa chuyên sửa các hãng Tivi nào?</h2>
+            <p class="service-detail__text">Chúng tôi trang bị đầy đủ máy móc (máy ép tab, máy đóng chip) và sẵn linh kiện chính hãng cho:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Tivi Sony:</strong> Chuyên trị lỗi nháy đèn đỏ (2 nháy, 5 nháy, 6 nháy...), lỗi chết LED nền.</li>
+                <li class="service-detail__item"><strong>Tivi Samsung:</strong> Khắc phục lỗi tối nửa màn hình, hỏng cáp màn hình, treo logo.</li>
+                <li class="service-detail__item"><strong>Tivi LG:</strong> Chuyên sửa lỗi Panel màn hình, chết bo khiển, lỗi WebOS.</li>
+                <li class="service-detail__item"><strong>Các hãng khác:</strong> TCL, Asanzo, Panasonic, Toshiba, Sharp, Casper...</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/sua-ti-vi.png" alt="Kỹ thuật viên đang kiểm tra bo mạch Tivi" class="image-box__img">
+                <span class="image-box__caption">Đội ngũ thợ điện tử lành nghề, xử lý an toàn tại nhà khách hàng</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">4. Quy trình sửa Tivi chuyên nghiệp tại nhà</h2>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Bước 1:</strong> Khách hàng cung cấp tên dòng máy (Model) và tình trạng lỗi qua điện thoại.</li>
+                <li class="service-detail__item"><strong>Bước 2:</strong> Kỹ thuật viên chuẩn bị linh kiện dự kiến, đến tận nhà kiểm tra thực tế.</li>
+                <li class="service-detail__item"><strong>Bước 3:</strong> Đưa ra phương án sửa chữa tối ưu nhất (sửa mạch hoặc thay thế linh kiện) và báo giá.</li>
+                <li class="service-detail__item"><strong>Bước 4:</strong> Tiến hành sửa chữa trực tiếp. Với các lỗi ép Tab màn hình phức tạp, thợ sẽ viết biên nhận để mang màn về phòng máy chân không xử lý.</li>
+                <li class="service-detail__item"><strong>Bước 5:</strong> Lắp đặt hoàn thiện, kiểm tra hình ảnh/âm thanh và dán tem bảo hành.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">5. Mẹo bảo quản Tivi tăng tuổi thọ màn hình</h2>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Lau màn hình đúng cách:</strong> Chỉ dùng khăn mềm, khô (như khăn lau kính) hoặc xịt dung dịch chuyên dụng lên khăn (không xịt trực tiếp lên màn).</li>
+                <li class="service-detail__item"><strong>Vị trí lắp đặt:</strong> Đặt tivi cách tường tối thiểu 5-10cm để tản nhiệt. Tránh những mảng tường hay bị ẩm mốc.</li>
+                <li class="service-detail__item"><strong>Sử dụng ổn áp:</strong> Nếu khu vực bạn sống điện yếu, nên trang bị ổn áp để bảo vệ nguồn tivi.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="related-posts">
+        <h2 class="related-posts__title">Bài Viết Liên Quan</h2>
+        <div class="related-posts__grid">
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Chữa Tủ Lạnh Uy Tín</h3>
+                <p class="post-card__desc">Khắc phục nhanh tình trạng tủ lạnh kém lạnh, đóng tuyết dày, bơm gas tận nhà.</p>
+                <a href="./sua-chua-tu-lanh.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Bếp Từ Cao Cấp</h3>
+                <p class="post-card__desc">Xử lý chập công suất, không nhận nồi, lỗi cảm ứng bếp từ các hãng Châu Âu.</p>
+                <a href="./sua-chua-bep-tu-bep-dien.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Điều Hòa Tại Hà Nội</h3>
+                <p class="post-card__desc">Bảo dưỡng, vệ sinh, sửa lỗi không lên nguồn, máy kêu to và rò rỉ gas.</p>
+                <a href="./sua-chua-dieu-hoa.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta">
+        <h3 class="bottom-cta__title">ĐẶT LỊCH SỬA TIVI NGAY HÔM NAY</h3>
+        <p class="bottom-cta__desc">Khôi phục trải nghiệm giải trí - Bảo hành dài hạn</p>
+        <a href="tel:0559763681" class="btn btn--primary btn--large">HOTLINE: 0559763681</a>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

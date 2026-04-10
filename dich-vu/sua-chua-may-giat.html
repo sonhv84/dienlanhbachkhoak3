@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Địa Chỉ Sửa Chữa Máy Giặt Uy Tín Tại Hà Nội – Thợ Giỏi, Phục Vụ Tại Nhà</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --footer-bg: #1a3a5a;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.7; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        /* --- Block: layout-container --- */
+        .layout-container { max-width: 1100px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        /* --- Block: breadcrumb --- */
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: btn --- */
+        .btn { display: inline-block; border-radius: 5px; font-weight: bold; text-align: center; cursor: pointer; }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 15px 35px; border-radius: 50px; font-size: 18px; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+        .btn--outline { border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; }
+        .btn--outline:hover { background: var(--primary-color); color: var(--white); }
+        .btn--large { font-size: 22px; padding: 18px 50px; border-radius: 8px; }
+
+        /* --- Block: hero --- */
+        .hero { padding: 40px 30px; text-align: center; border-bottom: 1px solid var(--border-color); }
+        .hero__title { color: var(--primary-blue); font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
+        .hero__desc { color: var(--text-muted); max-width: 800px; margin: 0 auto 25px; font-size: 16px; }
+        .hero__hotline-sub { display: block; margin-top: 15px; color: var(--primary-color); font-weight: bold; font-size: 16px; }
+
+        /* --- Block: service-detail --- */
+        .service-detail { padding: 40px 30px; }
+        .service-detail__block { margin-bottom: 40px; }
+        .service-detail__heading { font-size: 22px; color: var(--primary-blue); border-left: 4px solid var(--accent-cyan); padding-left: 10px; margin-bottom: 15px; }
+        .service-detail__subheading { font-size: 18px; color: var(--text-dark); margin: 20px 0 10px; }
+        .service-detail__text { margin-bottom: 15px; }
+        .service-detail__list { padding-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+        .service-detail__item { margin-bottom: 10px; }
+
+        /* --- Block: image-box --- */
+        .image-box { text-align: center; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        .image-box__img { width: 100%; max-width: 800px; border-radius: 8px; box-shadow: var(--shadow); transition: transform var(--transition-speed); }
+        .image-box__img:hover { transform: scale(1.02); }
+        .image-box__caption { display: block; font-style: italic; color: var(--text-muted); margin-top: 10px; font-size: 14px; }
+
+        /* --- Block: promo-banner --- */
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 1px solid var(--border-color); }
+
+        /* --- Block: related-posts --- */
+        .related-posts { background-color: var(--bg-gray); padding: 40px 30px; border-top: 1px solid var(--border-color); }
+        .related-posts__title { text-align: center; color: var(--primary-blue); margin-bottom: 30px; font-size: 22px; }
+        .related-posts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        /* --- Block: post-card --- */
+        .post-card { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: all var(--transition-speed); }
+        .post-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--accent-cyan); }
+        .post-card__title { font-size: 18px; color: var(--text-dark); margin-bottom: 10px; }
+        .post-card__desc { color: var(--text-muted); font-size: 14px; margin-bottom: 15px; }
+        .post-card__link { color: var(--primary-color); font-weight: bold; font-size: 14px; }
+        .post-card__link:hover { color: var(--accent-cyan); }
+
+        /* --- Block: bottom-cta --- */
+        .bottom-cta { background: var(--footer-bg); padding: 50px 20px; text-align: center; }
+        .bottom-cta__title { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+        .bottom-cta__desc { color: var(--accent-cyan); font-size: 18px; margin-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../dich-vu.html" class="breadcrumb__link">Dịch vụ Điện Lạnh</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Sửa Chữa Máy Giặt Tại Hà Nội</span>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero__title">Địa Chỉ Sửa Chữa Máy Giặt Uy Tín Tại Hà Nội – Thợ Giỏi, Phục Vụ Tại Nhà</h1>
+        <p class="hero__desc">Máy giặt là thiết bị giải phóng sức lao động cực kỳ quan trọng trong mỗi gia đình. Khi máy giặt gặp sự cố như không vắt, không cấp nước hay phát ra tiếng kêu lạ, mọi sinh hoạt sẽ trở nên đảo lộn.</p>
+        <p class="hero__desc">Bạn đang tìm kiếm dịch vụ <strong>sửa máy giặt tại nhà Hà Nội</strong> chuyên nghiệp, trung thực và giá rẻ? <strong>Điện Lạnh Bách Khoa</strong> với đội ngũ kỹ thuật viên dày dặn kinh nghiệm chuyên xử lý dứt điểm các lỗi trên máy giặt cửa ngang, cửa đứng của tất cả các hãng.</p>
+        
+        <a href="tel:0559763681" class="btn btn--primary">📞 0559763681 - BẤM GỌI NGAY</a>
+        <a href="tel:0367274152" class="hero__hotline-sub">Hoặc Hotline: 0367274152</a>
+    </section>
+
+    <section class="service-detail">
+        
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">1. Tại sao cần sửa chữa và bảo dưỡng máy giặt kịp thời?</h2>
+            <p class="service-detail__text">Máy giặt hoạt động trong môi trường ẩm ướt, tích tụ nhiều xơ vải và cặn xà phòng. Nếu không được bảo dưỡng định kỳ, thiết bị sẽ gặp các vấn đề về vệ sinh và hiệu suất, gây tốn điện nước và hư hỏng linh kiện bên trong.</p>
+            <div class="image-box">
+                <img src="./data/images/kiem-tra-long-giat.png" alt="Thợ đang kiểm tra lồng máy giặt" class="image-box__img">
+                <span class="image-box__caption">Kiểm tra định kỳ giúp kéo dài tuổi thọ máy giặt đáng kể</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">2. Những hư hỏng thường gặp trên máy giặt</h2>
+            
+            <h3 class="service-detail__subheading">Máy giặt không cấp nước hoặc cấp nước liên tục</h3>
+            <p class="service-detail__text">Nguyên nhân thường do hỏng van cấp nước, tắc lưới lọc hoặc lỗi bo mạch không điều khiển được hệ thống cấp nước.</p>
+
+            <h3 class="service-detail__subheading">Máy giặt rung lắc mạnh, kêu to khi vắt</h3>
+            <p class="service-detail__text">Đây là lỗi rất phổ biến, có thể do máy bị đặt lệch, hỏng bộ giảm xóc (thụt) hoặc bi phớt của lồng giặt đã bị mòn sau thời gian dài sử dụng.</p>
+
+            <div class="promo-banner">
+                <a href="tel:0559763681" class="btn btn--outline">⚡ Yêu cầu thợ tới ngay: 0559763681</a>
+            </div>
+
+            <h3 class="service-detail__subheading">Máy giặt không xả nước hoặc không vắt</h3>
+            <p class="service-detail__text">Thường do tắc nghẽn đường ống thoát, hỏng bơm xả hoặc lỗi công tắc cửa (đặc biệt phổ biến đối với máy giặt cửa ngang).</p>
+            <div class="image-box">
+                <img src="./data/images/sua-chua-bang-mach.png" alt="Sửa chữa bảng mạch máy giặt" class="image-box__img">
+                <span class="image-box__caption">Kỹ thuật viên kiểm tra lỗi bo mạch điều khiển phức tạp</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">3. Điện Lạnh Bách Khoa chuyên sửa các hãng máy nào?</h2>
+            <p class="service-detail__text">Chúng tôi am hiểu sâu về kỹ thuật và có sẵn linh kiện thay thế chính hãng cho:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Máy giặt cửa ngang (Front Load):</strong> Electrolux, LG, Samsung, Bosch, Beko.</li>
+                <li class="service-detail__item"><strong>Máy giặt cửa trên (Top Load):</strong> Panasonic, Toshiba, Sharp, Aqua/Sanyo, Midea.</li>
+                <li class="service-detail__item"><strong>Các dòng máy giặt nội địa Nhật:</strong> Chuyên sửa các dòng máy sử dụng điện 110V của Panasonic, Hitachi, National.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">4. Lý do khách hàng tin dùng dịch vụ của chúng tôi</h2>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Phục vụ nhanh chóng:</strong> Có mặt tại nhà chỉ sau 20-30 phút gọi điện tại tất cả các quận nội thành Hà Nội.</li>
+                <li class="service-detail__item"><strong>Linh kiện chính hãng:</strong> Cam kết thay thế linh kiện chuẩn hãng, có tem mác và xuất xứ rõ ràng.</li>
+                <li class="service-detail__item"><strong>Thợ giỏi, thật thà:</strong> Đội ngũ kỹ thuật được đào tạo bài bản, tuyệt đối không gian lận, báo đúng giá, sửa đúng bệnh.</li>
+                <li class="service-detail__item"><strong>Bảo hành uy tín:</strong> Cung cấp phiếu bảo hành dài hạn từ 6-12 tháng giúp khách hàng yên tâm tuyệt đối.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">5. Quy trình sửa chữa máy giặt chuyên nghiệp</h2>
+            <ol class="service-detail__list">
+                <li class="service-detail__item"><strong>Bước 1:</strong> Tiếp nhận yêu cầu qua Hotline và tư vấn sơ bộ tình trạng máy.</li>
+                <li class="service-detail__item"><strong>Bước 2:</strong> Kỹ thuật viên đến tận nhà kiểm tra thực tế và báo giá chi tiết trước khi làm.</li>
+                <li class="service-detail__item"><strong>Bước 3:</strong> Tiến hành sửa chữa hoặc thay thế linh kiện ngay khi khách hàng đồng ý.</li>
+                <li class="service-detail__item"><strong>Bước 4:</strong> Vận hành chạy thử máy để kiểm tra độ rung lắc, cấp nước và thoát nước.</li>
+                <li class="service-detail__item"><strong>Bước 5:</strong> Viết hóa đơn bảo hành, dán tem và bàn giao thiết bị cho khách hàng.</li>
+            </ol>
+            <div class="image-box">
+                <img src="./data/images/ve-sinh-long-giat.png" alt="Vệ sinh lồng giặt chuyên nghiệp" class="image-box__img">
+                <span class="image-box__caption">Vệ sinh máy giặt định kỳ giúp quần áo luôn sạch thơm và tránh vi khuẩn</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">6. Mẹo sử dụng máy giặt bền bỉ và hiệu quả</h2>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Không giặt quá tải:</strong> Chỉ nên giặt khoảng 80% công suất máy để máy hoạt động êm ái, tránh hỏng trục.</li>
+                <li class="service-detail__item"><strong>Dùng đúng loại xà phòng:</strong> Sử dụng nước giặt chuyên dụng cho cửa ngang hoặc cửa trên để tránh bọt tràn vào mạch điện.</li>
+                <li class="service-detail__item"><strong>Vệ sinh khay chứa:</strong> Thường xuyên rửa sạch khay đựng xà phòng và màng lọc nước đầu vào.</li>
+                <li class="service-detail__item"><strong>Mở cửa máy sau khi giặt:</strong> Giúp lồng giặt được khô thoáng tự nhiên, tránh mùi ẩm mốc và vi khuẩn phát triển.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="related-posts">
+        <h2 class="related-posts__title">Bài Viết Liên Quan</h2>
+        <div class="related-posts__grid">
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Điều Hòa Tại Hà Nội</h3>
+                <p class="post-card__desc">Khắc phục máy không mát, nạp gas, vệ sinh bảo dưỡng điều hòa nhanh chóng.</p>
+                <a href="./sua-chua-dieu-hoa.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Chữa Tủ Lạnh Uy Tín</h3>
+                <p class="post-card__desc">Xử lý tủ lạnh đóng tuyết, ngăn mát không làm lạnh, bơm gas chuyên nghiệp.</p>
+                <a href="./sua-chua-tu-lanh.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Bình Nóng Lạnh Tại Nhà</h3>
+                <p class="post-card__desc">Sửa bình nóng lạnh rò điện, chậm nóng, thay thanh Magie bảo vệ bình.</p>
+                <a href="./sua-chua-binh-nong-lanh.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta">
+        <h3 class="bottom-cta__title">ĐẶT LỊCH SỬA MÁY GIẶT NGAY</h3>
+        <p class="bottom-cta__desc">Phục vụ 24/7 - Có mặt ngay sau 20 phút tại khắp Hà Nội</p>
+        <a href="tel:0559763681" class="btn btn--primary btn--large">HOTLINE: 0559763681</a>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

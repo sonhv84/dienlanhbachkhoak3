@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bếp Từ Báo Lỗi E0, E1, E2: Nguyên Nhân & Cách Khắc Phục – Điện Lạnh Bách Khoa</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --footer-bg: #1a3a5a;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.8; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        .layout-container { max-width: 900px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        .article { padding: 40px 40px; }
+        .article__header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+        .article__title { color: var(--primary-blue); font-size: 32px; margin-bottom: 15px; line-height: 1.4; }
+        .article__meta { color: var(--text-muted); font-size: 14px; font-style: italic; }
+        .article__meta span { margin: 0 10px; }
+        .article__meta strong { color: var(--primary-color); }
+
+        .article__content h2 { font-size: 24px; color: var(--primary-blue); margin: 30px 0 15px; border-left: 4px solid var(--accent-cyan); padding-left: 10px; }
+        .article__content h3 { font-size: 20px; color: var(--text-dark); margin: 20px 0 10px; }
+        .article__content p { margin-bottom: 15px; font-size: 16px; color: var(--text-color); }
+        .article__content ul, .article__content ol { margin-bottom: 15px; padding-left: 20px; }
+        .article__content li { margin-bottom: 10px; }
+        .article__content img { width: 100%; height: auto; border-radius: 8px; margin: 20px 0; box-shadow: var(--shadow); }
+        .article__content .img-caption { display: block; text-align: center; font-style: italic; font-size: 14px; color: var(--text-muted); margin-top: -10px; margin-bottom: 20px; }
+
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 2px dashed var(--accent-cyan); }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 12px 30px; border-radius: 50px; font-weight: bold; font-size: 18px; display: inline-block; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); margin-top: 10px; }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../tin-tuc.html" class="breadcrumb__link">Tin tức & Cẩm nang</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Bếp Từ Báo Lỗi E0, E1, E2...</span>
+    </nav>
+
+    <article class="article">
+        <header class="article__header">
+            <h1 class="article__title">Bếp Từ Báo Lỗi E0, E1, E2 Liên Tục? Hướng Dẫn Tự Khắc Phục Nhanh Tại Nhà</h1>
+            <div class="article__meta">
+                <span><i class="fas fa-calendar-alt"></i> Ngày đăng: <strong>15/03/2026</strong></span> |
+                <span><i class="fas fa-user"></i> Tác giả: <strong>Kỹ thuật viên Bách Khoa</strong></span> |
+                <span><i class="fas fa-folder"></i> Chuyên mục: <strong>Bếp từ</strong></span>
+            </div>
+        </header>
+
+        <div class="article__content">
+            <p>Đang nấu bữa cơm tối cho gia đình, bỗng nhiên chiếc bếp từ phát ra tiếng kêu "tít tít" liên tục kèm theo các mã lỗi lạ như E0, E1, E2 nhấp nháy trên màn hình rồi tắt lịm. Đừng quá hoảng hốt và gọi thợ ngay lập tức, vì có những lỗi bạn hoàn toàn có thể xử lý chỉ trong 30 giây.</p>
+            <p>Dưới đây là cẩm nang giải mã các mã lỗi phổ biến nhất trên bếp từ và cách khắc phục cực kỳ đơn giản từ chuyên gia của <strong>Điện Lạnh Bách Khoa</strong>.</p>
+
+            <img src="../dich-vu/data/images/loi-pho-bien-bep-tu.png" alt="Các mã lỗi bếp từ phổ biến">
+            <span class="img-caption">Giải mã mã lỗi giúp bạn tự xử lý các rắc rối nhỏ trên bếp từ tại nhà</span>
+
+            <h2>1. Mã lỗi E0: Bếp không nhận nồi</h2>
+            <p>Đây là lỗi thường gặp nhất. Màn hình báo E0 nghĩa là bếp đã bật nhưng không phát hiện được dụng cụ nấu phù hợp trên vùng nấu.</p>
+            <ul>
+                <li><strong>Nguyên nhân:</strong> Do nồi không phải loại nhiễm từ (nồi nhôm, thủy tinh, sứ), hoặc đường kính nồi quá nhỏ (dưới 10cm).</li>
+                <li><strong>Cách khắc phục:</strong> Thử dùng một thỏi nam châm nhỏ đặt vào đáy nồi, nếu nam châm hút chặt thì nồi đó dùng được. Hãy thay thế bằng bộ nồi chuyên dụng cho bếp từ có đáy bằng phẳng.</li>
+            </ul>
+
+            <h2>2. Mã lỗi E1: Bếp quá nóng (Quá nhiệt)</h2>
+            <p>Lỗi E1 xuất hiện khi bạn nấu ăn ở công suất lớn trong thời gian quá dài, khiến linh kiện bên trong bếp vượt ngưỡng nhiệt độ cho phép.</p>
+            <ul>
+                <li><strong>Nguyên nhân:</strong> Quạt gió bị bụi bẩn bít kín, hoặc khe thoát nhiệt bị che khuất khiến hơi nóng không thoát được ra ngoài.</li>
+                <li><strong>Cách khắc phục:</strong> Tắt bếp ngay lập tức nhưng <strong>KHÔNG rút điện</strong> (để quạt tiếp tục chạy làm mát). Chờ khoảng 10-15 phút cho bếp nguội hẳn rồi mới tiếp tục nấu. Kiểm tra lại xem khe gió dưới gầm bếp có bị vật gì che mất không.</li>
+            </ul>
+
+            <div class="promo-banner">
+                <h3 style="color: var(--primary-blue); margin-bottom: 5px;">BẾP TỪ NỔ CẦU CHÌ, MẤT NGUỒN HOÀN TOÀN?</h3>
+                <p>Khả năng cao đã chập công suất IGBT. Tuyệt đối không tự ý tháo mở nếu không có chuyên môn.</p>
+                <a href="tel:0559763681" class="btn btn--primary">ĐẶT LỊCH SỬA TẠI NHÀ: 0559763681</a>
+            </div>
+
+            <h2>3. Mã lỗi E2: Nguồn điện quá mạnh hoặc quá yếu</h2>
+            <p>Tại một số khu vực có lưới điện không ổn định, bếp từ sẽ tự động ngắt và báo E2 để bảo vệ bo mạch vi xử lý.</p>
+            <ul>
+                <li><strong>Nguyên nhân:</strong> Điện áp vượt quá 250V hoặc tụt xuống dưới 170V. Hoặc do bạn đặt nồi lên bếp mà trong nồi chưa có thức ăn (nồi không).</li>
+                <li><strong>Cách khắc phục:</strong> Kiểm tra lại nguồn điện gia đình. Nếu tình trạng diễn ra thường xuyên, bạn nên lắp thêm <strong>ổn áp</strong> dành riêng cho bếp từ. Ngoài ra, hãy cho thức ăn vào nồi trước khi bật bếp.</li>
+            </ul>
+
+            <h2>Khi nào bạn thực sự cần gọi thợ chuyên nghiệp?</h2>
+            <p>Nếu bạn đã thử các cách trên mà màn hình vẫn báo lỗi hoặc xuất hiện các mã phức tạp hơn như **E9, EA, Er22**... thì đó là dấu hiệu của lỗi bo mạch điều khiển hoặc cảm biến nhiệt bên trong đã hỏng. Lúc này, hãy liên hệ với các đơn vị uy tín để được kiểm tra và thay thế linh kiện chính hãng.</p>
+            <p><strong>Điện Lạnh Bách Khoa</strong> cam kết xử lý triệt để mọi lỗi bếp từ Châu Âu, Nhật Nội Địa tại nhà Hà Nội. Liên hệ ngay Hotline <strong>0559763681</strong> để được tư vấn miễn phí!</p>
+        </div>
+    </article>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Sửa Máy Rửa Bát Tại Hà Nội – Xử Lý Triệt Để Mã Lỗi, Linh Kiện Chuẩn Hãng</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --footer-bg: #1a3a5a;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.7; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        /* --- Block: layout-container --- */
+        .layout-container { max-width: 1100px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        /* --- Block: breadcrumb --- */
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: btn --- */
+        .btn { display: inline-block; border-radius: 5px; font-weight: bold; text-align: center; cursor: pointer; }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 15px 35px; border-radius: 50px; font-size: 18px; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+        .btn--outline { border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; }
+        .btn--outline:hover { background: var(--primary-color); color: var(--white); }
+        .btn--large { font-size: 22px; padding: 18px 50px; border-radius: 8px; }
+
+        /* --- Block: hero --- */
+        .hero { padding: 40px 30px; text-align: center; border-bottom: 1px solid var(--border-color); }
+        .hero__title { color: var(--primary-blue); font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
+        .hero__desc { color: var(--text-muted); max-width: 800px; margin: 0 auto 25px; font-size: 16px; }
+        .hero__hotline-sub { display: block; margin-top: 15px; color: var(--primary-color); font-weight: bold; font-size: 16px; }
+
+        /* --- Block: service-detail --- */
+        .service-detail { padding: 40px 30px; }
+        .service-detail__block { margin-bottom: 40px; }
+        .service-detail__heading { font-size: 22px; color: var(--primary-blue); border-left: 4px solid var(--accent-cyan); padding-left: 10px; margin-bottom: 15px; }
+        .service-detail__subheading { font-size: 18px; color: var(--text-dark); margin: 20px 0 10px; }
+        .service-detail__text { margin-bottom: 15px; }
+        .service-detail__list { padding-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+        .service-detail__item { margin-bottom: 10px; }
+
+        /* --- Block: image-box --- */
+        .image-box { text-align: center; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        .image-box__img { width: 100%; max-width: 800px; border-radius: 8px; box-shadow: var(--shadow); transition: transform var(--transition-speed); }
+        .image-box__img:hover { transform: scale(1.02); }
+        .image-box__caption { display: block; font-style: italic; color: var(--text-muted); margin-top: 10px; font-size: 14px; }
+
+        /* --- Block: promo-banner --- */
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 1px solid var(--border-color); }
+
+        /* --- Block: related-posts --- */
+        .related-posts { background-color: var(--bg-gray); padding: 40px 30px; border-top: 1px solid var(--border-color); }
+        .related-posts__title { text-align: center; color: var(--primary-blue); margin-bottom: 30px; font-size: 22px; }
+        .related-posts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        /* --- Block: post-card --- */
+        .post-card { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: all var(--transition-speed); }
+        .post-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--accent-cyan); }
+        .post-card__title { font-size: 18px; color: var(--text-dark); margin-bottom: 10px; }
+        .post-card__desc { color: var(--text-muted); font-size: 14px; margin-bottom: 15px; }
+        .post-card__link { color: var(--primary-color); font-weight: bold; font-size: 14px; }
+        .post-card__link:hover { color: var(--accent-cyan); }
+
+        /* --- Block: bottom-cta --- */
+        .bottom-cta { background: var(--footer-bg); padding: 50px 20px; text-align: center; }
+        .bottom-cta__title { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+        .bottom-cta__desc { color: var(--accent-cyan); font-size: 18px; margin-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../dich-vu.html" class="breadcrumb__link">Dịch vụ Điện Lạnh</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Sửa Máy Rửa Bát Tại Hà Nội</span>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero__title">Dịch Vụ Sửa Máy Rửa Bát Tại Hà Nội – Xử Lý Triệt Để Mã Lỗi, Linh Kiện Chuẩn Hãng</h1>
+        <p class="hero__desc">Máy rửa bát là thiết bị gia dụng có hệ thống điều khiển cực kỳ thông minh nhưng cũng rất nhạy cảm. Khác với máy giặt, máy rửa bát sử dụng áp lực nước cực lớn kết hợp nhiệt độ cao và hóa chất tẩy rửa mạnh, do đó các sự cố thường liên quan đến cảm biến, gioăng cao su và hệ thống bơm áp lực.</p>
+        <p class="hero__desc">Bạn đang gặp lỗi E15, E19, E24, ... trên máy rửa bát Bosch? Hay máy Electrolux không nóng nước? <strong>Điện Lạnh Bách Khoa</strong> với đội ngũ thợ chuyên dòng máy Châu Âu sẽ giúp bạn xử lý ngay tại nhà.</p>
+        
+        <a href="tel:0559763681" class="btn btn--primary">📞 0559763681 - BẤM GỌI NGAY</a>
+        <a href="tel:0367274152" class="hero__hotline-sub">Hoặc Hotline: 0367274152</a>
+    </section>
+
+    <section class="service-detail">
+        
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">1. Giải mã mã lỗi phổ biến (Dòng Bosch/Siemens)</h2>
+            <p class="service-detail__text">Khi máy gặp sự cố, màn hình LED sẽ hiển thị mã lỗi. Dưới đây là ý nghĩa kỹ thuật giúp bạn nhận biết tình trạng máy:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Lỗi E15:</strong> Nước bị rò rỉ xuống sàn máy (đáy máy), kích hoạt phao chống tràn.</li>
+                <li class="service-detail__item"><strong>Lỗi E19:</strong> Lỗi trở kháng trên bộ phận trao đổi nhiệt hoặc lỗi van tuần hoàn.</li>
+                <li class="service-detail__item"><strong>Lỗi E24:</strong> Lỗi hệ thống xả (bơm xả bị kẹt hoặc ống xả bị tắc).</li>
+                <li class="service-detail__item"><strong>Lỗi E09/E11:</strong> Lỗi hệ thống làm nóng (thanh nhiệt bị cháy hoặc lỗi cảm biến nhiệt).</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">2. Phân tích chi tiết các hư hỏng nặng</h2>
+            
+            <h3 class="service-detail__subheading">Hỏng bơm nhiệt (Heat Pump)</h3>
+            <p class="service-detail__text">Đây là linh kiện quan trọng trong máy rửa bát. Bơm nhiệt vừa có chức năng đẩy nước áp lực cao, vừa làm nóng nước. Nếu máy rửa bằng nước lạnh hoặc kêu "u u" nhưng không phun nước, rất có thể bơm nhiệt đã hỏng.</p>
+
+            <h3 class="service-detail__subheading">Lỗi bo mạch điều khiển (Mainboard)</h3>
+            <p class="service-detail__text">Do đặc điểm khí hậu nồm ẩm tại Hà Nội, bo mạch rất dễ bị ẩm mạch hoặc oxy hóa các đường tín hiệu. Thợ của chúng tôi sẽ tiến hành đo đạc, xử lý lỗi IC hoặc relay để phục hồi bo mạch zin của máy một cách tối ưu nhất.</p>
+
+            <div class="promo-banner">
+                <a href="tel:0559763681" class="btn btn--outline">⚡ Yêu cầu thợ tới ngay: 0559763681</a>
+            </div>
+
+            <h3 class="service-detail__subheading">Hỏng hệ thống van nạp và phao cảm biến</h3>
+            <p class="service-detail__text">Máy báo lỗi nước không vào (E14) hoặc nước tràn liên tục. Nguyên nhân thường do van từ bị cháy hoặc cảm biến lưu lượng (Flow meter) bị sai lệch thông số kỹ thuật.</p>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">3. Tại sao nên chọn thợ chuyên nghiệp?</h2>
+            <p class="service-detail__text">Máy rửa bát là thiết bị đòi hỏi am hiểu về cả <strong>Thủy lực</strong> và <strong>Điện tử</strong>:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Thợ dân dụng:</strong> Thường chỉ biết đấu nối dây điện, dễ làm hỏng các cảm biến nhạy cảm hoặc lắp đặt sai gây rò nước nghiêm trọng.</li>
+                <li class="service-detail__item"><strong>Điện Lạnh Bách Khoa:</strong> Có máy đo chuyên dụng, am hiểu phần mềm của máy (reset lỗi, xóa bộ nhớ đệm), đảm bảo máy chạy đúng chu trình chuẩn của hãng sau khi sửa chữa.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">4. Điện Lạnh Bách Khoa chuyên sửa các hãng máy nào?</h2>
+            <p class="service-detail__text">Chúng tôi cung cấp linh kiện chính hãng cho:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Bosch (Series 2, 4, 6, 8):</strong> Linh kiện sẵn có, xử lý mọi mã lỗi khó từ E01 đến E27.</li>
+                <li class="service-detail__item"><strong>Electrolux, Hafele, Teka, Malloca:</strong> Xử lý triệt để lỗi hệ thống sấy và bơm áp lực.</li>
+                <li class="service-detail__item"><strong>Texgio, Galanz, Beko:</strong> Dòng máy phổ thông, linh kiện thay thế chính hãng với giá sửa chữa cực tốt.</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/may-rua-bat.png" alt="Thợ đang đo mạch máy rửa bát Bosch" class="image-box__img">
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">5. Quy trình kiểm tra lỗi chuyên môn</h2>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Bước 1:</strong> Check mã lỗi hiển thị và kiểm tra lịch sử lỗi trong bộ nhớ máy.</li>
+                <li class="service-detail__item"><strong>Bước 2:</strong> Tháo vỏ máy, kiểm tra trực quan các dấu hiệu rò rỉ nước hoặc cháy nổ linh kiện.</li>
+                <li class="service-detail__item"><strong>Bước 3:</strong> Sử dụng đồng hồ vạn năng đo trở kháng thanh nhiệt, bơm và van từ.</li>
+                <li class="service-detail__item"><strong>Bước 4:</strong> Báo giá minh bạch và tiến hành thay thế linh kiện (nếu cần).</li>
+                <li class="service-detail__item"><strong>Bước 5:</strong> Test chương trình ngắn (Quick wash) để kiểm tra độ kín nước và nhiệt độ trước khi bàn giao.</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/mach-may-rua-bat.png" alt="Kiểm tra mạch máy rửa bát" class="image-box__img">
+                <span class="image-box__caption">Kiểm tra chuyên sâu hệ thống bo mạch máy rửa bát tại nhà khách hàng</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">6. Hướng dẫn tự xử lý các lỗi cơ bản tại nhà</h2>
+            <p class="service-detail__text">Trước khi gọi thợ, quý khách có thể tự kiểm tra 3 điểm sau để tiết kiệm chi phí:</p>
+            <ol class="service-detail__list">
+                <li class="service-detail__item"><strong>Vệ sinh lưới lọc rác:</strong> 80% lỗi E24 (không thoát nước) là do rác bẩn, mảng bám kẹt ở hố bơm.</li>
+                <li class="service-detail__item"><strong>Kiểm tra tay phun:</strong> Nếu bát đĩa rửa không sạch, hãy tháo tay phun và dùng tăm thông các lỗ phun nước bị tắc bởi cặn vôi.</li>
+                <li class="service-detail__item"><strong>Reset máy:</strong> Nhấn giữ nút Start trong khoảng 3 giây để máy xả hết nước tồn đọng và xóa các lỗi tạm thời trong bộ nhớ.</li>
+            </ol>
+        </div>
+
+    </section>
+
+    <section class="related-posts">
+        <h2 class="related-posts__title">Bài Viết Liên Quan</h2>
+        <div class="related-posts__grid">
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Máy Giặt Cửa Ngang</h3>
+                <p class="post-card__desc">Khắc phục lỗi không xả vắt, kêu to, thay lồng giặt chuyên nghiệp.</p>
+                <a href="./sua-chua-may-giat.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Bếp Từ Nhập Khẩu</h3>
+                <p class="post-card__desc">Xử lý chập công suất IGBT, không nhận nồi trên bếp Bosch, Teka.</p>
+                <a href="./sua-chua-bep-tu-bep-dien.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Tủ Lạnh Side-by-Side</h3>
+                <p class="post-card__desc">Sửa bo mạch Inverter, thay block và bơm gas tủ lạnh chính hãng.</p>
+                <a href="./sua-chua-tu-lanh.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta">
+        <h3 class="bottom-cta__title">ĐẶT LỊCH SỬA MÁY RỬA BÁT NGAY</h3>
+        <p class="bottom-cta__desc">Chuyên dòng máy Bosch, Electrolux - Linh kiện chính hãng</p>
+        <a href="tel:0559763681" class="btn btn--primary btn--large">HOTLINE: 0559763681</a>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

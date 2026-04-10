@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Sửa Máy Sấy Quần Áo Tại Hà Nội – Nhanh Chóng, Chuyên Nghiệp</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --footer-bg: #1a3a5a;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-color); background-color: var(--bg-gray); line-height: 1.7; }
+        a { text-decoration: none; transition: all var(--transition-speed); }
+
+        /* --- Block: layout-container --- */
+        .layout-container { max-width: 1100px; margin: 40px auto; background: var(--bg-color); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+
+        /* --- Block: breadcrumb --- */
+        .breadcrumb { background-color: var(--bg-gray); padding: 15px 30px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: btn --- */
+        .btn { display: inline-block; border-radius: 5px; font-weight: bold; text-align: center; cursor: pointer; }
+        .btn--primary { background: var(--accent-yellow); color: var(--text-dark); padding: 15px 35px; border-radius: 50px; font-size: 18px; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); }
+        .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); }
+        .btn--outline { border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 25px; }
+        .btn--outline:hover { background: var(--primary-color); color: var(--white); }
+        .btn--large { font-size: 22px; padding: 18px 50px; border-radius: 8px; }
+
+        /* --- Block: hero --- */
+        .hero { padding: 40px 30px; text-align: center; border-bottom: 1px solid var(--border-color); }
+        .hero__title { color: var(--primary-blue); font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
+        .hero__desc { color: var(--text-muted); max-width: 800px; margin: 0 auto 25px; font-size: 16px; }
+        .hero__hotline-sub { display: block; margin-top: 15px; color: var(--primary-color); font-weight: bold; font-size: 16px; }
+
+        /* --- Block: service-detail --- */
+        .service-detail { padding: 40px 30px; }
+        .service-detail__block { margin-bottom: 40px; }
+        .service-detail__heading { font-size: 22px; color: var(--primary-blue); border-left: 4px solid var(--accent-cyan); padding-left: 10px; margin-bottom: 15px; }
+        .service-detail__subheading { font-size: 18px; color: var(--text-dark); margin: 20px 0 10px; }
+        .service-detail__text { margin-bottom: 15px; }
+        .service-detail__list { padding-left: 20px; margin-top: 15px; margin-bottom: 15px; }
+        .service-detail__item { margin-bottom: 10px; }
+
+        /* --- Block: image-box --- */
+        .image-box { text-align: center; margin: 20px 0; border-radius: 8px; overflow: hidden; }
+        .image-box__img { width: 100%; max-width: 800px; border-radius: 8px; box-shadow: var(--shadow); transition: transform var(--transition-speed); }
+        .image-box__img:hover { transform: scale(1.02); }
+        .image-box__caption { display: block; font-style: italic; color: var(--text-muted); margin-top: 10px; font-size: 14px; }
+
+        /* --- Block: promo-banner --- */
+        .promo-banner { text-align: center; margin: 30px 0; padding: 20px; background: var(--hover-bg); border-radius: 8px; border: 1px solid var(--border-color); }
+
+        /* --- Block: related-posts --- */
+        .related-posts { background-color: var(--bg-gray); padding: 40px 30px; border-top: 1px solid var(--border-color); }
+        .related-posts__title { text-align: center; color: var(--primary-blue); margin-bottom: 30px; font-size: 22px; }
+        .related-posts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        /* --- Block: post-card --- */
+        .post-card { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: all var(--transition-speed); }
+        .post-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--accent-cyan); }
+        .post-card__title { font-size: 18px; color: var(--text-dark); margin-bottom: 10px; }
+        .post-card__desc { color: var(--text-muted); font-size: 14px; margin-bottom: 15px; }
+        .post-card__link { color: var(--primary-color); font-weight: bold; font-size: 14px; }
+        .post-card__link:hover { color: var(--accent-cyan); }
+
+        /* --- Block: bottom-cta --- */
+        .bottom-cta { background: var(--footer-bg); padding: 50px 20px; text-align: center; }
+        .bottom-cta__title { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+        .bottom-cta__desc { color: var(--accent-cyan); font-size: 18px; margin-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <a href="../dich-vu.html" class="breadcrumb__link">Dịch vụ Điện Lạnh</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Sửa Máy Sấy Quần Áo Tại Hà Nội</span>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero__title">Dịch Vụ Sửa Máy Sấy Quần Áo Tại Hà Nội – Nhanh Chóng, Chuyên Nghiệp</h1>
+        <p class="hero__desc">Máy sấy quần áo là thiết bị cực kỳ quan trọng, đặc biệt là trong những ngày thời tiết nồm ẩm tại Hà Nội. Tuy nhiên, do hoạt động với công suất nhiệt lớn và liên tục, máy sấy thường gặp các vấn đề về dây curoa, thanh nhiệt hoặc cảm biến độ ẩm khiến quần áo không khô hoặc máy kêu to.</p>
+        <p class="hero__desc">Bạn đang cần <strong>sửa máy sấy quần áo tại nhà</strong>? <strong>Điện Lạnh Bách Khoa</strong> chuyên xử lý dứt điểm các dòng máy sấy thông hơi, máy sấy ngưng tụ và máy sấy Heatpump của các hãng Electrolux, LG, Samsung, Candy...</p>
+        
+        <a href="tel:0559763681" class="btn btn--primary">📞 0559763681 - BẤM GỌI NGAY</a>
+        <a href="tel:0367274152" class="hero__hotline-sub">Hoặc Hotline: 0367274152</a>
+    </section>
+
+    <section class="service-detail">
+        
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">1. Phân loại các dòng máy sấy phổ biến hiện nay</h2>
+            <p class="service-detail__text">Mỗi dòng máy sấy có cấu tạo nhiệt khác nhau, đòi hỏi thợ phải có kiến thức chuyên biệt để xử lý:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Máy sấy thông hơi:</strong> Dùng thanh điện trở nhiệt, thổi hơi ẩm trực tiếp ra ngoài qua ống dẫn.</li>
+                <li class="service-detail__item"><strong>Máy sấy ngưng tụ:</strong> Hơi ẩm được ngưng tụ thành nước và chứa trong khay hoặc thoát ra ống dẫn nước.</li>
+                <li class="service-detail__item"><strong>Máy sấy Heatpump (Bơm nhiệt):</strong> Công nghệ hiện đại nhất, dùng máy nén để luân chuyển nhiệt, giúp bảo vệ sợi vải và tiết kiệm điện tối ưu.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">2. Các lỗi thường gặp trên máy sấy quần áo</h2>
+            
+            <h3 class="service-detail__subheading">Máy sấy không quay lồng</h3>
+            <p class="service-detail__text">Nguyên nhân phổ biến nhất là do <strong>đứt dây curoa</strong> hoặc hỏng tụ khởi động motor. Khi motor chạy nhưng lồng không quay, bạn sẽ nghe thấy tiếng "u u" bên trong máy.</p>
+
+            <h3 class="service-detail__subheading">Máy sấy kêu to, rung lắc mạnh</h3>
+            <p class="service-detail__text">Do bánh tỳ lồng giặt bị mòn, hỏng bi hoặc máy đặt không cân bằng. Việc thay bánh tỳ chính hãng sẽ giúp máy hoạt động êm ái trở lại.</p>
+
+            <div class="promo-banner">
+                <a href="tel:0559763681" class="btn btn--outline">⚡ Yêu cầu thợ tới ngay: 0559763681</a>
+            </div>
+
+            <h3 class="service-detail__subheading">Máy sấy không vào điện hoặc liệt phím</h3>
+            <p class="service-detail__text">Thường do hỏng bo mạch điều khiển do môi trường quá ẩm hoặc quá tải điện năng gây cháy IC nguồn và các linh kiện điện tử.</p>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">3. Tại sao máy sấy chạy nhưng quần áo không khô?</h2>
+            <p class="service-detail__text">Đây là tình trạng khiến khách hàng khó chịu nhất. Có 3 nguyên nhân chính:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Cháy thanh điện trở (thanh sấy):</strong> Máy vẫn quay nhưng không có hơi nóng để làm khô vải.</li>
+                <li class="service-detail__item"><strong>Hỏng cảm biến độ ẩm:</strong> Máy báo sai thông tin, ngắt chương trình quá sớm khi quần áo vẫn còn ẩm.</li>
+                <li class="service-detail__item"><strong>Lưới lọc xơ vải bị tắc:</strong> Hơi nóng không thể lưu thông, làm giảm hiệu suất sấy và dễ gây quá nhiệt cháy máy.</li>
+            </ul>
+            <div class="image-box">
+                <img src="./data/images/may-say-quan-ao.png" alt="Thợ đang kiểm tra máy sấy" class="image-box__img">
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">4. Điện Lạnh Bách Khoa chuyên sửa các hãng máy nào?</h2>
+            <p class="service-detail__text">Chúng tôi sẵn kho linh kiện chính hãng (dây curoa, thanh nhiệt, cảm biến) cho các thương hiệu:</p>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Electrolux:</strong> Dòng máy sấy phổ biến nhất, chuyên xử lý lỗi đứt dây curoa và hỏng mạch điều khiển.</li>
+                <li class="service-detail__item"><strong>LG, Samsung:</strong> Các dòng máy sấy Heatpump đời mới, xử lý chuyên sâu mã lỗi phần mềm và máy nén.</li>
+                <li class="service-detail__item"><strong>Candy, Whirlpool, Maytag:</strong> Các dòng máy nhập khẩu Châu Âu và Mỹ với linh kiện hiếm.</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">5. Quy trình sửa chữa chuyên nghiệp</h2>
+            <ol class="service-detail__list">
+                <li class="service-detail__item"><strong>Bước 1:</strong> Tiếp nhận yêu cầu và tư vấn tình trạng hư hỏng sơ bộ qua Hotline.</li>
+                <li class="service-detail__item"><strong>Bước 2:</strong> Thợ kỹ thuật có mặt sau 20-30 phút, tháo máy kiểm tra dây curoa, hệ thống nhiệt và bo mạch.</li>
+                <li class="service-detail__item"><strong>Bước 3:</strong> Báo giá chi tiết linh kiện cần thay thế theo đúng đơn giá công ty.</li>
+                <li class="service-detail__item"><strong>Bước 4:</strong> Tiến hành sửa chữa, kết hợp vệ sinh bụi vải tích tụ bên trong máy (nguyên nhân tiềm ẩn gây hỏa hoạn).</li>
+                <li class="service-detail__item"><strong>Bước 5:</strong> Test máy thực tế, bàn giao và viết phiếu bảo hành từ 6-12 tháng.</li>
+            </ol>
+            <div class="image-box">
+                <img src="./data/images/thay-day-may-say.png" alt="Thay dây curoa máy sấy" class="image-box__img">
+                <span class="image-box__caption">Vệ sinh và bảo dưỡng hệ thống nhiệt máy sấy định kỳ để đảm bảo hiệu suất</span>
+            </div>
+        </div>
+
+        <div class="service-detail__block">
+            <h2 class="service-detail__heading">6. Mẹo sử dụng máy sấy bền bỉ</h2>
+            <ul class="service-detail__list">
+                <li class="service-detail__item"><strong>Vệ sinh lưới lọc sau mỗi lần sấy:</strong> Đây là việc quan trọng nhất để máy bền, sấy nhanh khô và tiết kiệm điện.</li>
+                <li class="service-detail__item"><strong>Không sấy quá nhiều quần áo một lúc:</strong> Tránh tình trạng làm giãn, đứt dây curoa hoặc cháy motor do quá tải.</li>
+                <li class="service-detail__item"><strong>Phân loại vải trước khi sấy:</strong> Chọn chế độ nhiệt phù hợp để bảo vệ sợi vải và tránh làm hỏng cảm biến độ ẩm.</li>
+                <li class="service-detail__item"><strong>Đặt máy nơi thoáng mát:</strong> Đặc biệt với máy sấy thông hơi để luồng khí nóng ẩm thoát ra ngoài dễ dàng nhất.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="related-posts">
+        <h2 class="related-posts__title">Bài Viết Liên Quan</h2>
+        <div class="related-posts__grid">
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Máy Giặt Tại Nhà Hà Nội</h3>
+                <p class="post-card__desc">Sửa lỗi không vắt, không cấp nước, rung lắc kêu to trên máy giặt cửa ngang.</p>
+                <a href="./sua-chua-may-giat.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Máy Rửa Bát Uy Tín</h3>
+                <p class="post-card__desc">Khắc phục các mã lỗi E15, E19, E24 trên dòng máy Bosch, Electrolux.</p>
+                <a href="./sua-chua-may-rua-bat.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+            <div class="post-card">
+                <h3 class="post-card__title">Sửa Điều Hòa Giá Rẻ</h3>
+                <p class="post-card__desc">Bảo dưỡng, nạp gas, vệ sinh sạch sâu giúp điều hòa mát lạnh tức thì.</p>
+                <a href="./sua-chua-dieu-hoa.html" class="post-card__link">Xem chi tiết &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta">
+        <h3 class="bottom-cta__title">ĐẶT LỊCH SỬA MÁY SẤY NGAY</h3>
+        <p class="bottom-cta__desc">Chuyên nghiệp - Tận tâm - Có mặt sau 20 phút gọi điện</p>
+        <a href="tel:0559763681" class="btn btn--primary btn--large">HOTLINE: 0559763681</a>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

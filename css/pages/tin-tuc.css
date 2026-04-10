@@ -1,0 +1,187 @@
+/* ==========================================================================
+   TIN TỨC (NEWS SECTION) - Cấu trúc 3 Cột (Grid)
+   ========================================================================== */
+
+/* --- Block: news-list --- */
+.news-list { 
+    padding: 40px 15px; 
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto;    /* Căn giữa trang */
+}
+
+/* * Chìa khóa để tạo 3 cột:
+ * Sử dụng CSS Grid. 
+ * 'repeat(3, 1fr)' nghĩa là chia đều thành 3 cột bằng nhau trên desktop.
+ */
+.news-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* Ép cứng 3 cột trên Desktop */
+    gap: 30px; /* Khoảng cách giữa các bài viết */
+}
+
+/* --- Block: news-card --- */
+.news-card { 
+    background: var(--bg-color, #fff); 
+    border: 1px solid var(--border-color, #e0e0e0); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    transition: all var(--transition-speed, 0.3s); 
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Thêm một chút bóng đổ cho đẹp */
+}
+
+.news-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng đậm hơn khi hover */
+    border-color: var(--accent-cyan, #40e0d0); 
+}
+
+/* Khung chứa ảnh Thumbnail */
+.news-card__thumb { 
+    width: 100%; 
+    height: 220px; /* Cố định chiều cao ảnh để các thẻ bằng nhau */
+    overflow: hidden; 
+    background: var(--hover-bg, #f5f7fa); 
+}
+
+/* Ảnh bên trong Thumbnail */
+.news-card__img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Cắt cúp ảnh cho vừa vặn khung hình */
+    transition: transform var(--transition-speed, 0.3s) ease-in-out; 
+}
+
+/* Hiệu ứng phóng to ảnh khi hover chuột vào Card */
+.news-card:hover .news-card__img { 
+    transform: scale(1.08); 
+}
+
+/* Khung chứa Nội dung (Tiêu đề, đoạn trích, nút Đọc tiếp) */
+.news-card__content { 
+    padding: 20px; 
+    flex-grow: 1; /* Quan trọng: Đẩy nút Đọc tiếp xuống dưới cùng */
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* Dòng chứa Ngày tháng & Chuyên mục */
+.news-card__meta { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 13px; 
+    color: var(--text-muted, #636e72); 
+    margin-bottom: 12px; 
+    font-style: italic; 
+}
+
+.news-card__category {
+    font-weight: 500;
+    color: var(--primary-color, #0056b3);
+}
+
+/* Tiêu đề bài viết */
+.news-card__title { 
+    font-size: 18px; 
+    color: var(--text-dark, #2d3436); 
+    margin-bottom: 12px; 
+    line-height: 1.4; 
+    
+    /* Giới hạn tiêu đề ở 2 dòng, nếu dài quá sẽ thành dấu ... */
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+}
+
+.news-card__title a { 
+    color: inherit; 
+    text-decoration: none;
+    transition: color var(--transition-speed, 0.3s);
+}
+
+.news-card__title a:hover { 
+    color: var(--primary-color, #0056b3); 
+}
+
+/* Đoạn trích nội dung (Mô tả ngắn) */
+.news-card__excerpt { 
+    color: var(--text-muted, #636e72); 
+    font-size: 14px; 
+    margin-bottom: 18px; 
+    line-height: 1.6;
+    
+    /* Giới hạn đoạn trích ở 3 dòng, nếu dài quá sẽ thành dấu ... */
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+}
+
+/* Nút Đọc tiếp */
+.news-card__readmore { 
+    color: var(--primary-color, #0056b3); 
+    font-weight: bold; 
+    font-size: 14px; 
+    margin-top: auto; /* Luôn ép nút này xuống sát đáy thẻ */
+    display: inline-block; 
+    text-transform: uppercase;
+    transition: color var(--transition-speed, 0.3s);
+}
+
+.news-card__readmore:hover { 
+    color: var(--accent-yellow, #ffb400); 
+}
+
+/* Căn giữa toàn bộ khu vực chứa tiêu đề */
+.news-category {
+    text-align: center; 
+    margin-bottom: 40px; /* Tạo khoảng cách thoáng với danh sách bài viết bên dưới */
+    padding-top: 20px;
+}
+
+/* Định dạng chữ cho tiêu đề */
+.news-title {
+    font-size: 32px; /* Kích thước chữ lớn, nổi bật */
+    color: var(--primary-blue, #065087); /* Màu xanh chủ đạo của website */
+    text-transform: uppercase; /* In hoa toàn bộ */
+    font-weight: 700; /* In đậm */
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block; /* Giúp đường gạch chân bám sát độ dài của chữ */
+}
+
+/* Thêm đường gạch chân trang trí bên dưới tiêu đề (giúp xịn sò hơn) */
+.news-title::after {
+    content: "";
+    position: absolute;
+    bottom: -12px; /* Khoảng cách từ chữ xuống đường gạch */
+    left: 50%;
+    transform: translateX(-50%); /* Căn đường gạch ra chính giữa tuyệt đối */
+    width: 80px; /* Chiều dài của đường gạch */
+    height: 4px; /* Độ dày của đường gạch */
+    background-color: var(--accent-cyan, #40e0d0); /* Màu xanh ngọc tạo điểm nhấn */
+    border-radius: 2px; /* Bo góc nhẹ cho đường gạch */
+}
+/* ==========================================================================
+   RESPONSIVE (Tự động co giãn trên Điện thoại và Tablet)
+   ========================================================================== */
+
+/* Tablet (Màn hình dưới 992px): Chuyển thành 2 cột */
+@media (max-width: 992px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (Màn hình dưới 768px): Chuyển thành 1 cột */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card__thumb {
+        height: 200px; /* Giảm nhẹ chiều cao ảnh trên điện thoại */
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm Nang Hướng Dẫn & Mẹo Hay Điện Lạnh – Điện Lạnh Bách Khoa</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-blue: #065087;
+            --bg-color: #ffffff;
+            --bg-gray: #f8fafc;
+            --hover-bg: #f5f7fa;
+            --accent-cyan: #40e0d0;
+            --accent-yellow: #ffb400;
+            --text-color: #333333;
+            --text-dark: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Base --- */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: var(--text-color); 
+            background-color: var(--bg-gray); 
+            line-height: 1.7; 
+        }
+        
+        a { 
+            text-decoration: none; 
+            transition: all var(--transition-speed); 
+        }
+
+        /* --- Block: layout-container --- */
+        .layout-container { 
+            max-width: 1100px; 
+            margin: 40px auto; 
+            background: var(--bg-color); 
+            border-radius: 12px; 
+            box-shadow: var(--shadow); 
+            overflow: hidden; 
+        }
+
+        /* --- Block: breadcrumb --- */
+        .breadcrumb { 
+            background-color: var(--bg-gray); 
+            padding: 15px 30px; 
+            font-size: 14px; 
+            border-bottom: 1px solid var(--border-color); 
+        }
+        .breadcrumb__link { color: var(--primary-color); font-weight: 500; }
+        .breadcrumb__link:hover { color: var(--primary-blue); text-decoration: underline; }
+        .breadcrumb__separator { margin: 0 8px; color: var(--text-muted); }
+        .breadcrumb__current { color: var(--text-muted); }
+
+        /* --- Block: hero --- */
+        .hero { 
+            padding: 40px 30px; 
+            text-align: center; 
+            border-bottom: 1px solid var(--border-color); 
+        }
+        .hero__title { 
+            color: var(--primary-blue); 
+            font-size: 28px; 
+            text-transform: uppercase; 
+            margin-bottom: 10px; 
+        }
+        .hero__desc { 
+            color: var(--text-muted); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            font-size: 16px; 
+        }
+
+        /* --- Block: guide-list --- */
+        .guide-list { padding: 40px 30px; }
+        .guide-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+        }
+
+        /* --- Block: guide-card --- */
+        .guide-card { 
+            background: var(--bg-color); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            padding: 25px; 
+            transition: all var(--transition-speed); 
+            display: flex; 
+            flex-direction: column;
+            text-align: center;
+        }
+        .guide-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: var(--shadow); 
+            border-color: var(--accent-cyan); 
+        }
+        
+        .guide-card__icon { 
+            font-size: 40px; 
+            color: var(--primary-color); 
+            margin-bottom: 15px; 
+            display: block;
+        }
+        .guide-card__title { 
+            font-size: 19px; 
+            color: var(--text-dark); 
+            margin-bottom: 12px; 
+            line-height: 1.4; 
+        }
+        .guide-card__desc { 
+            color: var(--text-muted); 
+            font-size: 14px; 
+            margin-bottom: 20px; 
+            flex-grow: 1; 
+        }
+        .guide-card__link { 
+            color: var(--primary-color); 
+            font-weight: bold; 
+            font-size: 15px; 
+            padding: 10px 20px; 
+            border: 1px solid var(--primary-color); 
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: auto; /* Giúp các nút luôn thẳng hàng ở dưới đáy */
+        }
+        .guide-card:hover .guide-card__link { 
+            background: var(--primary-color); 
+            color: var(--white); 
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout-container">
+    <nav class="breadcrumb">
+        <a href="./index.html" class="breadcrumb__link">Trang chủ</a> 
+        <span class="breadcrumb__separator">/</span> 
+        <span class="breadcrumb__current">Hướng dẫn & Mẹo hay</span>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero__title">Cẩm Nang Hướng Dẫn Kỹ Thuật</h1>
+        <p class="hero__desc">Chia sẻ kinh nghiệm sử dụng, bảo quản và tự khắc phục các sự cố điện lạnh cơ bản giúp bạn tiết kiệm chi phí và tăng tuổi thọ thiết bị.</p>
+    </section>
+
+    <section class="guide-list">
+        <div class="guide-grid">
+            
+            <div class="guide-card">
+                <i class="fas fa-bolt guide-card__icon"></i>
+                <h3 class="guide-card__title">Sử dụng điều hòa tiết kiệm điện</h3>
+                <p class="guide-card__desc">Bật mí các thói quen sử dụng máy lạnh giúp giảm ngay 30-40% hóa đơn tiền điện hàng tháng.</p>
+                <a href="./huong-dan/su-dung-dieu-hoa-tiet-kiem.html" class="guide-card__link">Xem hướng dẫn</a>
+            </div>
+
+            <div class="guide-card">
+                <i class="fas fa-gas-pump guide-card__icon"></i>
+                <h3 class="guide-card__title">Khi nào cần nạp gas điều hòa?</h3>
+                <p class="guide-card__desc">Hướng dẫn cách nhận biết máy lạnh bị thiếu gas qua các dấu hiệu thực tế tại nhà.</p>
+                <a href="./huong-dan/khi-nao-can-nap-gas.html" class="guide-card__link">Xem hướng dẫn</a>
+            </div>
+
+            <div class="guide-card">
+                <i class="fas fa-exclamation-triangle guide-card__icon"></i>
+                <h3 class="guide-card__title">Dấu hiệu máy lạnh bị hỏng</h3>
+                <p class="guide-card__desc">Tổng hợp các biểu hiện máy lạnh đang gặp sự cố nghiêm trọng cần gọi kỹ thuật viên gấp.</p>
+                <a href="./huong-dan/dau-hieu-may-lanh-hong.html" class="guide-card__link">Xem hướng dẫn</a>
+            </div>
+
+            <div class="guide-card">
+                <i class="fas fa-hand-sparkles guide-card__icon"></i>
+                <h3 class="guide-card__title">Tự vệ sinh điều hòa tại nhà</h3>
+                <p class="guide-card__desc">Quy trình 4 bước đơn giản để bạn tự làm sạch lưới lọc bụi chỉ trong vòng 15 phút.</p>
+                <a href="./huong-dan/tu-ve-sinh-tai-nha.html" class="guide-card__link">Xem hướng dẫn</a>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+<script type="module" src="./js/main.js"></script>
+
+</body>
+</html>

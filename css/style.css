@@ -8,6 +8,7 @@
 @import url('./pages/index.css');
 @import url('./pages/bang_gia.css');
 @import url('./pages/lien_he.css');
+@import url('./pages/dich_vu.css');
 
 /* 2. Khai báo biến và định dạng toàn cục (Global) */
 
@@ -39,4 +40,64 @@ main {
     z-index: 1000;
     width: 100%;
     display: block;
+}
+
+/* ==================================================
+   GIAO DIỆN PHÂN TRANG BÀI VIẾT DỊCH VỤ
+================================================== */
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 2px dashed #e0e0e0;
+}
+
+.custom-pagination .page-item {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.custom-pagination .page-item:hover {
+    background-color: #f1f1f1;
+    border-color: #bbbbbb;
+    transform: translateY(-2px);
+}
+
+.custom-pagination .page-item.number {
+    padding: 10px 14px;
+}
+
+.custom-pagination .page-item.active {
+    background-color: #005696; /* Màu xanh nhận diện thương hiệu Bách Khoa */
+    color: #ffffff;
+    border-color: #005696;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(0, 86, 150, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsive cho thanh phân trang */
+@media (max-width: 576px) {
+    .custom-pagination .page-item {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
 }
