@@ -453,3 +453,110 @@
             color: var(--text-muted); 
             font-size: 13px; 
         }
+
+        /* ==========================================
+   FIX LỖI LỆCH & TỐI ƯU MOBILE 
+========================================== */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999999;
+    align-items: flex-end; /* Luôn bám sát lề phải */
+}
+
+.floating-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Nhãn chữ nằm bên trái Icon */
+.floating-label {
+    background: #ffffff;
+    color: #065087;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none; /* Không cản trở click vào nút dưới */
+}
+
+/* Hover hiện nhãn trên Desktop */
+.floating-item:hover .floating-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Nút tròn chứa Icon */
+.floating-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+/* Màu sắc & Animation */
+.zalo .floating-icon { background: linear-gradient(135deg, #0068ff, #00a0ff); }
+.phone .floating-icon { background: linear-gradient(135deg, #28a745, #3cc762); }
+
+/* Double Ripple Effect (Sóng kép) */
+.floating-icon::before, .floating-icon::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+    animation: ripple 2s infinite;
+}
+.zalo .floating-icon::before, .zalo .floating-icon::after { background: rgba(0, 104, 255, 0.4); }
+.phone .floating-icon::before, .phone .floating-icon::after { background: rgba(40, 167, 69, 0.4); }
+.floating-icon::after { animation-delay: 1s; }
+
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* --- XỬ LÝ RIÊNG CHO MOBILE --- */
+@media (max-width: 768px) {
+    .floating-contact {
+        bottom: 20px;
+        right: 15px;
+        gap: 12px;
+    }
+
+    .floating-icon {
+        width: 80px; /* Nhỏ lại 1 chút cho đỡ chiếm chỗ */
+        height: 80px;
+        font-size: 40px;
+    }
+
+    /* Trên mobile: Hiện nhãn chữ dạng nhỏ gọn luôn */
+    .floating-label {
+        opacity: 1;
+        transform: none;
+        font-size: 11px;
+        padding: 4px 10px;
+        margin-right: 8px;
+        display: block; /* Hiện cố định trên mobile */
+    }
+}
