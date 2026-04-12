@@ -1,10 +1,10 @@
 User-agent: *
 Allow: /
 
-# Chặn các thư mục không cần index
+# Chan cac thu muc khong can index
 Disallow: /components/
 Disallow: /dich-vu/data/
 Disallow: /404.html
 
-# Khai báo sitemap
+# Khai bao sitemap
 Sitemap: https://dienlanhbachkhoak3.com.vn/sitemap.xml
